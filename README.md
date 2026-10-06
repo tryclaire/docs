@@ -50,5 +50,10 @@ source switch; remove it afterward so there is one source of truth.
 
 ## License
 
-No reuse license has been selected yet. Public visibility is not a grant of an open-source
-license; the owner must choose one before this repository is advertised as open-source.
+Copyright © 2026 Claire documentation contributors.
+
+The documentation in this repository is licensed under
+[Creative Commons Attribution 4.0 International (CC BY 4.0)](LICENSE).
+You may share and adapt it, including commercially, with attribution to Claire,
+a link to the license, and an indication of any changes.
+The license does not grant rights to Claire's trademarks.
