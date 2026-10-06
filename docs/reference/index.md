@@ -27,5 +27,5 @@ Limits do not guarantee that an integration is currently connected or collected 
 
 ## More reference
 
-- [Developer API](developer-api.md): keys, scopes, and endpoint references.
+- [Developer API and SDK](developer-api.md): create keys, install `@tryclaire/sdk` from npm, and read workspace data from your server or agent.
 - [Security and data](security-and-data.md): access, public surfaces, and stored data.

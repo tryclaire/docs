@@ -23,4 +23,4 @@ Your personal account is separate from workspaces. Each workspace has its own me
 | [Sources](sources/index.md) | Telegram chats and join portal, X activity, and optional token data. |
 | [Publishing](publishing/index.md) | Public profile, domains, and docs from Claire or GitHub. |
 | [Automations](automations/index.md) | Telegram rules, weekly reports, and notifications. |
-| [Reference](reference/index.md) | Limits, developer API, security, and data. |
+| [Reference](reference/index.md) | Limits, developer API and npm SDK, security, and data. |

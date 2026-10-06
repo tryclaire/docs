@@ -32,3 +32,5 @@ Only the owner changes another member's role.
 ## Choose your next step
 
 [Link a Telegram chat](../sources/telegram.md), [connect X](../sources/x.md), or [set up your site](../publishing/index.md). You can do these in any order.
+
+Building a server or agent integration? An owner or admin can [create a developer key and install the official npm SDK](../reference/developer-api.md) to read permitted workspace data.

@@ -11,6 +11,8 @@ Workspace content is available to authorized members, while sensitive management
 
 Only the owner can change another member's role or transfer ownership. Developer API keys belong to one workspace, have explicit read scopes, and require the issuing manager to keep their role. Marking a Knowledge item public does not publish it on the site.
 
+The official [`@tryclaire/sdk`](developer-api.md) uses those same scoped keys; it does not grant additional access. Use it server-side and keep keys out of browser bundles, public environment variables, and source control. Installing the package does not connect a workspace or create a key.
+
 > [!WARNING]
 > GitHub docs publish as soon as they sync, including docs from private repositories. See [publishing](../publishing/index.md) before syncing confidential material.
 
