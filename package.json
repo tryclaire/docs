@@ -1,0 +1,14 @@
+{
+  "name": "@tryclaire/docs",
+  "private": true,
+  "scripts": {
+    "check": "markdownlint-cli2"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "markdownlint-cli2": "0.23.3",
+    "markdownlint-rule-relative-links": "5.1.3"
+  }
+}
