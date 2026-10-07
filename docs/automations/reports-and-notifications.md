@@ -1,21 +1,11 @@
 ---
-title: Reports and notifications
+title: Notifications
 order: 10
 ---
 
-# Reports and notifications
+# Notifications
 
-Claire saves weekly reports from already collected workspace data and notifies owners and admins when reports are ready. Your notification bell holds other workspace updates.
-
-## Read a weekly report
-
-After each ISO week (Monday to Sunday, UTC) ends, Claire generates that week's report for every workspace with a linked Telegram chat, X account, or token. Open Reports to view saved reports. An owner or admin can also generate the most recently completed week on demand.
-
-A report collects available figures from linked Telegram chat activity, stored X observations, linked token observations, published docs and domains, and automation runs. It shows the previous week for comparison. Disconnected sources have no section. Reports use data Claire already collected; they do not query providers live.
-
-## Share a report
-
-An owner or admin can enable a public read-only link for a report and turn it off again. Anyone with an active link can view that report, so share it only with people who should see those figures. The ordinary report view requires workspace access.
+Your notification bell holds workspace updates. Notification delivery is separate from the [Telegram automation rules](index.md) your team explicitly enables; a weekly automation schedule is not a generated report.
 
 ## Set notification preferences
 

@@ -7,6 +7,8 @@ order: 9
 
 Owners and admins can create explicitly enabled rules that use a source event or weekly schedule to take an action in a linked Telegram chat. Rules do not post to X.
 
+The Developers API and MCP connections are read-only; enabling Agent access does not create or enable an automation rule. Telegram automations remain separately configured here and explicitly enabled by a manager.
+
 ## Choose a trigger
 
 | Trigger | Event |
@@ -39,4 +41,4 @@ At delivery, Claire rechecks the rule, approving manager's role, connected accou
 > [!IMPORTANT]
 > Unknown is never retried automatically. Check the chat before taking another action.
 
-A completed post is not posted again just because pinning it failed. Live delivery has an organization-wide hourly cap; see [current limits](../reference/index.md). See also [reports and notifications](reports-and-notifications.md).
+A completed post is not posted again just because pinning it failed. Live delivery has an organization-wide hourly cap; see [current limits](../reference/index.md). See also [notifications](reports-and-notifications.md).

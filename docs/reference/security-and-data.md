@@ -1,32 +1,32 @@
 ---
 title: Security and data
-order: 13
+order: 14
 ---
 
 # Security and data
 
-Workspace content is available to authorized members, while sensitive management actions require owner or admin access. Public profiles, published docs, public asset URLs, published vesting proofs, and reports shared by link are separate public surfaces.
+Workspace content is available to authorized members, while sensitive management actions require owner or admin access. Public profiles, published docs, public asset URLs and published vesting proofs are separate public surfaces.
 
 ## Control workspace access
 
-Only the owner can change another member's role or transfer ownership. Developer API keys belong to one workspace, have explicit read scopes, and require the issuing manager to keep their role.
+Only the owner can change another member's role or transfer ownership. Developer credentials belong to one workspace, have explicit read scopes and require the issuing manager to keep their role. **Developers → Settings** selects API, MCP or both; pre-existing keys remain API-only. Source inclusion in **Knowledge → Settings** and separate explicit **Agent access** approval (off by default) are both required in addition to matching scopes.
 
-A Knowledge item's **public reference** classification does not publish it or grant public access. A file explicitly marked **public** in Assets has a public file URL; do not mark confidential files public. Relative images imported with GitHub docs are copied into public Assets.
+A Knowledge item's **public reference** classification does not publish it or grant public access. Documents created through Context are private unpublished drafts, but **private/unpublished is not integration-private**: approving Agent access for Documents or Notes lets credentials with `knowledge:read` read private drafts or team notes, and agent providers may receive that content. Approving Telegram chats likewise lets credentials with `telegram:read` read stored conversations, including private linked groups or channels. External People reads still exclude private person notes. A file explicitly marked **public** in Assets has a public file URL; do not mark confidential files public. Relative images imported with GitHub docs are copied into public Assets.
 
 Only an owner designates a [token signing wallet](../sources/token-actions.md), separately for each chain. Owners and admins can prepare token actions and publish vesting links, but the designated wallet must sign organization transactions. Removing app access does not revoke wallet keys or on-chain rights.
 
 Funding a vesting stream exposes addresses, amounts, and its schedule on-chain even without a Claire proof page. Publishing additionally lists a public proof on the site; unpublishing does not make the underlying on-chain data private. A proof is not an audit, liquidity lock, or investment guarantee.
 
-The official [`@tryclaire/sdk`](developer-api.md) uses those same scoped keys; it does not grant additional access. Use it server-side and keep keys out of browser bundles, public environment variables, and source control. Installing the package does not connect a workspace or create a key.
+The official [`@tryclaire/sdk`](developer-api.md) is a REST client for scoped API keys, not an MCP client or an additional grant of access. [Native MCP](mcp.md) uses its own method permission on a shared workspace credential. Keep keys out of browser bundles, public variables and source control. Installing the package does not connect a workspace or create a credential.
 
 > [!WARNING]
 > GitHub docs publish as soon as they sync, including docs from private repositories. See [publishing](../publishing/index.md) before syncing confidential material.
 
 ## Understand stored data
 
-Claire retains connected source data and operational records. A linked Telegram chat's messages and activity are stored from the time the bot joins. Disconnecting a source does not automatically delete collected history.
+Claire retains connected source data and operational records. A linked Telegram chat's messages and activity are stored from the time the bot joins. Disconnecting a source does not automatically delete collected history. Excluding a source from Context does not disconnect or delete it.
 
-GitHub docs and team notes have different origins: edit synced docs at their repository source, while notes can be edited in Claire. Asset metadata does not mean Claire has indexed or read the asset's contents.
+GitHub docs and team notes have different origins: edit synced docs at their repository source, while notes can be edited in Claire. Asset metadata does not mean Claire has indexed or read the asset's contents. External People reads expose only approved Telegram/X activity and platform identities, not Claire profiles, private person notes or live avatars.
 
 ## Know what Claire does not do
 
