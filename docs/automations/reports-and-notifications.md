@@ -1,6 +1,6 @@
 ---
 title: Reports and notifications
-order: 9
+order: 10
 ---
 
 # Reports and notifications

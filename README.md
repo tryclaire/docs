@@ -32,31 +32,14 @@ and requires no provider or deployment secrets.
 
 ## Publishing
 
-Edit pages under `docs/`, run `npm run check`, and open a pull request. Once connected,
-merges to `main` affecting that folder enqueue a Claire sync. CI checks the repository;
-it does not publish the pages itself. Check Site → Docs sync status and rendered navigation
-before announcing a change as live.
+This repository (`tryclaire/docs`, branch `main`, folder `docs`) is the connected source for
+[docs.tryclaire.net](https://docs.tryclaire.net). Merging to `main` with changes under `docs/`
+enqueues a Claire sync; pages publish without a separate approval step. CI checks the
+repository but does not publish anything.
 
-Before publishing the token/vesting update, verify the advertised workflows in production.
-Ethereum/Stockereum availability and the SDK's new token fields must match the enabled
-deployment and released npm version. Remove rollout/unreleased notes only after verification.
-
-If the workspace has not switched its existing docs source to this repository, the owner
-must first complete the one-time source switch:
-
-- Repository: `tryclaire/docs`
-- Branch: `main`
-- Folder: `docs`
-
-Give the Claire GitHub App access to this repository and refresh the workspace's GitHub
-connection if it is missing from the verified repository list. Change the existing source
-in Site → Docs and sync; do not disconnect first, because disconnecting removes imported pages.
-The existing domain and hosting stay in place. Verify navigation and existing URLs after syncing.
-
-Once connected through the GitHub App, pushes to `main` affecting `docs/` enqueue a sync;
-merged documentation publishes without a separate approval in Claire. CI does not deploy
-anything itself. The old monorepo copy remains until the owner completes and verifies the
-source switch; remove it afterward so there is one source of truth.
+After merging, check Site → Docs sync status and the rendered navigation before announcing
+a change as live. Do not document rollout-gated features (such as Ethereum/Stockereum
+availability) as generally available until they are verified in production.
 
 ## License
 
