@@ -72,6 +72,14 @@ The key selects the workspace; you do not pass an organization ID to the client.
 
 Query arguments are optional. Use the Claire chat UUID from `telegram.chats.list()`, not Telegram's numeric chat ID. Pass Knowledge IDs, including their prefix, unchanged.
 
+### Token identity
+
+The next SDK contract adds `chainId`, `protocol`, `poolId`, and `pairedToken` inside `data.token`. These TypeScript fields are not in npm `0.1.0`; check the SDK release notes and hosted OpenAPI before relying on them. Ethereum availability is also rollout-gated.
+
+Identify a token by **chain ID and contract address together**: Ethereum is `1`, Robinhood Chain is `4663`, and `protocol` is `pons` or `stockereum`. The token object is `null` when none is linked.
+
+`pool` is a legacy V3 pool-address field; V4 launches use the zero address there. A non-null `poolId` is a Uniswap V4 pool identifier, **not** a contract address. `poolId` and `pairedToken` may be `null` when unavailable. These fields do not grant wallet access: the API and SDK still cannot launch, fund, claim, or sign transactions.
+
 ## Read responses and continue pagination
 
 The SDK preserves the API's `data`, `meta.freshness`, and endpoint-specific `pagination`. It also exposes `http.requestId`, `http.etag`, and response headers. Timestamps stay strings, and raw token balances stay decimal strings to avoid losing precision.
