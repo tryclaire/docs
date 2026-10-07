@@ -5,12 +5,16 @@ order: 2
 
 # Getting started
 
-Create a workspace for your project, then invite the people who need access. You do not need to link a token to use Telegram, X, Knowledge, or the site.
+Your personal space and organization workspaces are separate. Personal navigation contains your Home, Wallet and account settings; an organization contains its activity, sources, Knowledge, Assets, site and management settings. Create or choose a workspace for your project. You do not need to link a token to use Telegram, X, Knowledge, or the site.
 
 ## Create a workspace
 
 1. Sign in and create a workspace with a name and unique slug.
 2. Choose it from your workspace list. The creator becomes its owner.
+
+Owners and admins can use the optional **Getting started** sidebar checklist. Hide or restore it for the selected organization in **Personal settings → Appearance**; the preference applies to your account in this browser.
+
+Claire uses a dark interface. Appearance offers preset or custom accent colours for this browser, not an account-wide theme or a change to your public site's appearance.
 
 ## Invite teammates
 
@@ -31,6 +35,6 @@ Only the owner changes another member's role.
 
 ## Choose your next step
 
-[Link a Telegram chat](../sources/telegram.md), [connect X](../sources/x.md), or [set up your site](../publishing/index.md). You can do these in any order.
+[Link a Telegram chat](../sources/telegram.md), [connect X](../sources/x.md), or [set up your site](../publishing/index.md). You can do these in any order. For optional token tools, [verify a wallet and launch or vest a supported token](../sources/token-actions.md) when your chosen network is available.
 
 Building a server or agent integration? An owner or admin can [create a developer key and install the official npm SDK](../reference/developer-api.md) to read permitted workspace data.

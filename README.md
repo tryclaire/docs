@@ -30,9 +30,19 @@ person's approval is not required, so a solo maintainer can merge their own chec
 CI has read-only repository permissions, uses pinned actions and a dependency lockfile,
 and requires no provider or deployment secrets.
 
-## Connect publishing
+## Publishing
 
-The repository is prepared for the owner to switch the existing Claire workspace source:
+Edit pages under `docs/`, run `npm run check`, and open a pull request. Once connected,
+merges to `main` affecting that folder enqueue a Claire sync. CI checks the repository;
+it does not publish the pages itself. Check Site → Docs sync status and rendered navigation
+before announcing a change as live.
+
+Before publishing the token/vesting update, verify the advertised workflows in production.
+Ethereum/Stockereum availability and the SDK's new token fields must match the enabled
+deployment and released npm version. Remove rollout/unreleased notes only after verification.
+
+If the workspace has not switched its existing docs source to this repository, the owner
+must first complete the one-time source switch:
 
 - Repository: `tryclaire/docs`
 - Branch: `main`

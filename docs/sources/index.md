@@ -13,7 +13,10 @@ Connect the sources your workspace uses to inspect collected activity. A token i
 | --- | --- |
 | [Telegram](telegram.md) | Stored chat messages and activity, with an optional join portal. |
 | [X](x.md) | Connected profile, authored activity, follower snapshots, and collected mentions. |
-| [Token](token.md) | Market and on-chain observations for a supported pons token. |
+| [Token](token.md) | Market and on-chain observations for pons on Robinhood Chain and Stockereum on Ethereum. |
+| [Token actions](token-actions.md) | Designate a wallet, launch a token, fund vesting, and publish allocation evidence. |
+
+Ethereum/Stockereum support is rollout-gated. Confirm availability for your selected network before relying on Ethereum launch, linking, or vesting actions.
 
 ## Check collection status
 

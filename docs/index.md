@@ -5,7 +5,9 @@ order: 1
 
 # Introduction
 
-Claire is a workspace for project teams to inspect connected community activity and maintain project information and a public site. Connect Telegram chats and an X account, optionally link a supported token, write docs, and keep team notes in Knowledge.
+All-in-one infrastructure layer for teams, communities, and on-chain participants.
+
+Claire brings Telegram and X activity, supported token observations, team Knowledge, and public docs into one workspace. Teams can maintain a public profile and use wallet-signed token launches and vesting where available. Token tools are optional.
 
 ## Start here
 
@@ -20,7 +22,7 @@ Your personal account is separate from workspaces. Each workspace has its own me
 | Section | What you will find |
 | --- | --- |
 | [Getting started](getting-started/index.md) | Workspace creation, invitations, and roles. |
-| [Sources](sources/index.md) | Telegram chats and join portal, X activity, and optional token data. |
+| [Sources](sources/index.md) | Telegram chats and join portal, X activity, token data, and wallet-signed token actions. |
 | [Publishing](publishing/index.md) | Public profile, domains, and docs from Claire or GitHub. |
 | [Automations](automations/index.md) | Telegram rules, weekly reports, and notifications. |
 | [Reference](reference/index.md) | Limits, developer API and npm SDK, security, and data. |
