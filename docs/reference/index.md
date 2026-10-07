@@ -27,5 +27,6 @@ Limits do not guarantee that an integration is currently connected or collected 
 
 ## More reference
 
-- [Developer API and SDK](developer-api.md): create keys, install `@tryclaire/sdk` from npm, and read workspace data from your server or agent.
-- [Security and data](security-and-data.md): access, public surfaces, and stored data.
+- [Developer REST API and SDK](developer-api.md): source-first reads, scopes, shared credentials, and SDK installation.
+- [Native MCP](mcp.md): Streamable HTTP setup and read-only tools.
+- [Security and data](security-and-data.md): access, public surfaces, private drafts and stored data.

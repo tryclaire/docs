@@ -5,7 +5,7 @@ order: 2
 
 # Getting started
 
-Your personal space and organization workspaces are separate. Personal navigation contains your Home, Wallet and account settings; an organization contains its activity, sources, Knowledge, Assets, site and management settings. Create or choose a workspace for your project. You do not need to link a token to use Telegram, X, Knowledge, or the site.
+Your personal space and organization workspaces are separate. Personal navigation contains your Home, Wallet and account settings; an organization contains its activity, sources, Knowledge, site and management settings. Knowledge contains Context (library and People), Assets and Settings; Developers contains API, MCP and Settings. Create or choose a workspace for your project. You do not need to link a token to use Telegram, X, Knowledge, or the site.
 
 ## Create a workspace
 
@@ -37,4 +37,4 @@ Only the owner changes another member's role.
 
 [Link a Telegram chat](../sources/telegram.md), [connect X](../sources/x.md), or [set up your site](../publishing/index.md). You can do these in any order. For optional token tools, [verify a wallet and launch or vest a supported token](../sources/token-actions.md) when your chosen network is available.
 
-Building a server or agent integration? An owner or admin can [create a developer key and install the official npm SDK](../reference/developer-api.md) to read permitted workspace data.
+Building a server or agent integration? An owner or admin can [create a developer credential](../reference/developer-api.md) for REST, MCP, or both, then approve the sources it may read.
