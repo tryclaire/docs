@@ -74,7 +74,7 @@ Query arguments are optional. Use the Claire chat UUID from `telegram.chats.list
 
 ### Token identity
 
-The next SDK contract adds `chainId`, `protocol`, `poolId`, and `pairedToken` inside `data.token`. These TypeScript fields are not in npm `0.1.0`; check the SDK release notes and hosted OpenAPI before relying on them. Ethereum availability is also rollout-gated.
+SDK `0.2.0` adds typed `chainId`, `protocol`, `poolId`, and `pairedToken` fields inside `data.token`, matching the hosted API contract. Upgrade from `0.1.0` to use these TypeScript fields. Network availability still depends on the deployment; the SDK does not enable Ethereum transactions.
 
 Identify a token by **chain ID and contract address together**: Ethereum is `1`, Robinhood Chain is `4663`, and `protocol` is `pons` or `stockereum`. The token object is `null` when none is linked.
 
