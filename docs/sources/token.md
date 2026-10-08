@@ -20,7 +20,9 @@ The launch protocols have different economics: pons v2 uses a native-ETH curve b
 
 ## Work with holder snapshots
 
-Holder counts exclude the applicable factory, zero address, burn address, and applicable liquidity pool or pool manager. The deployer is not excluded by default. For a snapshot, filter by minimum balance and optionally exclude the deployer.
+Holder counts exclude the applicable factory, zero address, burn address, applicable liquidity pool or pool manager, and launchpad contracts that hold tokens for others (such as a fee escrow). The deployer is not excluded by default. For a snapshot, filter by minimum balance and optionally exclude the deployer.
+
+Raw balances are in the token's smallest unit, scaled by the token's own decimals. The holder index advances only to the chain's finalized block and re-indexes from the last matching block if the chain reorganizes, so holder figures trail the newest block (on Robinhood Chain by roughly 15 minutes).
 
 Snapshots use indexed transfer history. They are unavailable while the index is still filling; a past snapshot reflects indexed coverage, not an independent chain scan. You can preview a snapshot and export holder rows.
 
