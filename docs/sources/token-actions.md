@@ -52,3 +52,36 @@ This is evidence of a particular allocation, **not** an audit, endorsement, payo
 At `/vesting/<chainId>/<streamId>`, a signed-in user can connect a wallet and prepare a beneficiary payout claim without joining the organization. Anyone may submit and pay the network gas and quoted Sablier withdrawal fee, but tokens go only to the beneficiary recorded on-chain. The claim withdraws what is available when it executes; the displayed amount may change.
 
 Vesting with time alone does not send tokens automatically. Check the transaction outcome before relying on a payout. These beneficiary payouts are distinct from [creator-fee figures](token.md#read-creator-fee-figures), which remain read-only in Claire.
+
+## Planned: Claire protocol fees
+
+> [!IMPORTANT]
+> The Claire protocol is planned and not available. Its contracts are not deployed to any public network and have not been audited, so nothing below can be used today. The design can change before release, and none of it is a promise of income or returns.
+
+When it is enabled, every token launch through Claire goes through the workspace's own **fee router**. The router carries out the launch on pons v2 or Stockereum v3 and becomes the token's creator-fee recipient. There is no fee-free launch path through Claire. Launchpad settings that keep fees flowing to the router stay available, including the quote asset, tax rate, fee tier and initial buy. Stockereum's holder-reward mode is not available, because it would bypass the router.
+
+**Trading revenue** is everything the router claims from the launchpad's fee escrow. That includes project tax and the creator's base trading fees, and covers curve sweeps, the graduation credit and later pool sweeps. Trading volume, upstream platform and liquidity fees, gas and anything sent straight to the router are not trading revenue and are never charged. Each payout asset is split separately and paid in that asset, with no swap:
+
+- **Claire takes 10%** of trading revenue, deducted from the creator's share and split evenly between the Claire treasury and $CLAIRE holders.
+- **Project holders** receive the share you set when you deploy the router, up to 90%. The share is fixed once the router is deployed.
+- **The creator** receives the rest, including rounding remainders.
+
+| Per 100 units of trading revenue | Claire treasury | $CLAIRE holders | Creator | Project holders |
+| --- | --- | --- | --- | --- |
+| Holder sharing off | 5 | 5 | 90 | 0 |
+| Holder sharing at 50% | 5 | 5 | 40 | 50 |
+
+**Service fees** are fixed amounts of one USD stablecoin per chain, with no price oracle, so a depeg changes their real value but not the amount charged. Each fee is split evenly between the Claire treasury and $CLAIRE holders, and is separate from gas and launchpad fees:
+
+- **Launch:** USD 10, taken by the router in the launch transaction and charged only if the launch succeeds.
+- **Locking a token launched elsewhere:** USD 25 per funding transaction, however many beneficiaries. It is never a share of the locked tokens.
+- **Locking a token launched through Claire:** free apart from gas. Eligibility comes from an on-chain registry that only Claire fee routers can write, for tokens they launched themselves. Importing or naming a token does not make it eligible.
+- **Claims, unlocks, cancellations and transfers:** free apart from gas.
+
+Before you sign, Claire shows the exact payment token and amount, the launchpad's own fees and a gas estimate.
+
+Limits to keep in mind:
+
+- Project-holder payouts are distributed in rounds that the designated wallet publishes from Claire's finalized holder index. The published totals and allocations are trusted to be correct, and anyone can check each round's evidence.
+- On pons, anyone can credit a router's balance in the launchpad's fee escrow. Such a credit cannot be told apart from trading revenue, so it is split the same way.
+- Launchpad administrators can change upstream settings between review and execution.

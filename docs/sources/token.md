@@ -34,3 +34,5 @@ Snapshots use indexed transfer history. They are unavailable while the index is 
 Where provided for pons, creator fee figures come from the launch contracts. Claire estimates the claimable amount with a read-only on-chain call and never sends a creator-fee claim transaction. Stockereum fee and reward routing differs; do not interpret a pons creator-fee estimate as a Stockereum balance. See [current limits](../reference/index.md) for additional bounds.
 
 This read-only **creator-fee** display is separate from [wallet-signed launches, approvals, vesting funding, and beneficiary payout claims](token-actions.md). Claire does not custody funds or sign those transactions for you.
+
+The planned Claire protocol, which is not available yet, would route creator fees through a fee router instead. See [Planned: Claire protocol fees](token-actions.md#planned-claire-protocol-fees).
