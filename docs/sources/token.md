@@ -7,7 +7,7 @@ order: 6
 
 Token tools are optional. Select the network and enter the contract address of a supported pons token on Robinhood Chain or Stockereum v3 token on Ethereum. Claire verifies the selected chain and supported launch factory. Your workspace has one active linked token at a time.
 
-New pons v2 and Stockereum v3 launches, linking, and vesting require a [designated signing wallet](token-actions.md). Retained supported pons launches remain readable.
+New pons v2 and Stockereum v3 launches, linking, and vesting require a [designated signing wallet](token-actions.md). New launches and new vesting locks also require the planned Claire protocol, which is not deployed yet. Retained supported pons launches remain readable.
 
 > [!IMPORTANT]
 > Ethereum/Stockereum availability is rollout-gated. Confirm that Ethereum actions are available for your workspace before funding a wallet or promising a launch.
