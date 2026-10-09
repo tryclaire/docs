@@ -82,6 +82,8 @@ When it is enabled, every token launch through Claire goes through the workspace
 
 Before you sign, Claire shows the exact payment token and amount, the launchpad's own fees and a gas estimate.
 
+When the paying organization was referred, a referral reward comes out of Claire's treasury half of a service fee, never out of trading revenue. Projects that launched through Claire can also choose to airdrop part of their token to $CLAIRE holders. Both are planned with the protocol; see [$CLAIRE holders and referrals](../reference/claire-holders.md).
+
 Limits to keep in mind:
 
 - Project-holder payouts are distributed in rounds that the designated wallet publishes from Claire's finalized holder index. The published totals and allocations are trusted to be correct. Each round records its snapshot block and an evidence hash on-chain, but Claire does not yet publish the full allocation list needed to check that hash.

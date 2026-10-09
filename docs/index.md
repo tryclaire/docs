@@ -25,4 +25,4 @@ Your personal account is separate from workspaces. Each workspace has its own me
 | [Sources](sources/index.md) | Telegram, X, token data, wallet-signed token actions, Context, and Assets. |
 | [Publishing](publishing/index.md) | Public profile, domains, and docs from Claire or GitHub. |
 | [Automations](automations/index.md) | Telegram rules, scheduled actions, and notifications. |
-| [Reference](reference/index.md) | Limits, developer REST API, native MCP, SDK, security, and data. |
+| [Reference](reference/index.md) | Limits, developer REST API, native MCP, SDK, security, data, and planned $CLAIRE holder benefits and referrals. |

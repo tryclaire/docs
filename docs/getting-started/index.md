@@ -5,7 +5,7 @@ order: 2
 
 # Getting started
 
-Your personal space and organization workspaces are separate. Personal navigation contains your Home, Wallet and account settings; an organization contains its activity, sources, Knowledge, site and management settings. Knowledge contains Context (library and People), Assets and Settings; Developers contains API, MCP and Settings. Create or choose a workspace for your project. You do not need to link a token to use Telegram, X, Knowledge, or the site.
+Your personal space and organization workspaces are separate. Personal navigation contains your Home, Referrals, Wallet, [$CLAIRE](../reference/claire-holders.md) and account settings; an organization contains its activity, sources, Knowledge, site and management settings. Knowledge contains Context (library and People), Assets and Settings; Developers contains API, MCP and Settings. Create or choose a workspace for your project. You do not need to link a token to use Telegram, X, Knowledge, or the site.
 
 ## Create a workspace
 
