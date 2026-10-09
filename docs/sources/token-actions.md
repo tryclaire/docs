@@ -20,10 +20,12 @@ Removing the designation or a member does not revoke wallet keys, on-chain right
 
 ## Launch and link a token
 
-1. Enter launch details on the chosen network. Robinhood pons v2 uses native ETH or a pair token that pons approves, and offers a creator tax. Stockereum v3 uses an enabled quote and a permitted swap fee. Creator fees go to your workspace's Claire fee router, so Stockereum's holder-reward routing is not offered. Review the live factory settings and costs. An optional initial buy, where available, spends the pair token or wallet ETH.
-2. Select **Prepare launch**. Review the network, wallet, destination contract, calldata, ETH value, nonce, and costs before signing. Preparing is not submission; submission is not confirmation.
-3. Check **Transaction history and recovery** until the transaction is verified. Use **Refresh** or attach the known transaction hash if submission is uncertain. **Do not resend** an uncertain transaction or abandon it unless you know it was never sent. Confirmations reduce, but do not eliminate, reorganization risk.
-4. A verified launch is linked automatically only if the initiating user still has owner/admin access, the wallet designation is unchanged, and no different token is linked. A confirmed transaction can remain unassociated if those checks fail; read its status instead of launching again.
+1. Deploy your workspace's **Claire fee router** from the designated wallet. Set the project-holder share of trading revenue when you deploy it; it cannot change afterwards. Each router launches one token.
+2. Enter launch details on the chosen network. Robinhood pons v2 uses native ETH or a pair token that pons approves, and offers a creator tax; buybacks stay off. Stockereum v3 uses an enabled quote and a permitted swap fee. Creator fees go to your fee router, so Stockereum's holder-reward routing is not offered. Review the live factory settings and costs. An optional initial buy, where available, spends the pair token or wallet ETH.
+3. Approve the Claire launch fee to your fee router, and for a pons pair token also the exact initial buy. The router takes them in the launch transaction.
+4. Select **Prepare launch**. Review the network, wallet, destination contract, calldata, ETH value, nonce, and costs before signing. Preparing is not submission; submission is not confirmation.
+5. Check **Transaction history and recovery** until the transaction is verified. Use **Refresh** or attach the known transaction hash if submission is uncertain. **Do not resend** an uncertain transaction or abandon it unless you know it was never sent. Confirmations reduce, but do not eliminate, reorganization risk.
+6. A verified launch is linked automatically only if the initiating user still has owner/admin access, the wallet designation is unchanged, and no different token is linked. A confirmed transaction can remain unassociated if those checks fail; read its status instead of launching again.
 
 To link an existing supported token, use **Organization → Connections**, select its network and enter its contract address. Claire verifies the chain, factory, and designated wallet requirements. One workspace has one active linked token; resolve its existing link before starting a different launch.
 
