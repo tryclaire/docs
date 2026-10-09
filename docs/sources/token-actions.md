@@ -47,7 +47,7 @@ Sablier allocations are **noncancelable and nontransferable**. A Claire lock is 
 
 ## Publish proof and claim payouts
 
-After funding is verified and associated with the workspace, an owner or admin can **Publish** the lock. The organization site links to `/locks/<chainId>/<streamId>`, where anyone can inspect the beneficiary, schedule, contract, funding transaction, and on-chain locked, claimable, and withdrawn amounts.
+After funding is verified and associated with the workspace, an owner or admin can **Publish** the lock. The organization site links to `/locks/<chainId>/<streamId>` for a Sablier stream or `/locks/<chainId>/claire-<lockId>` for a Claire lock, where anyone can inspect the beneficiary, schedule, contract, funding transaction, and on-chain locked, claimable, and withdrawn amounts.
 
 This is evidence of a particular allocation, **not** an audit, endorsement, payout guarantee, or liquidity lock. Unpublishing removes Claire's public listing/proof access; it does not hide on-chain addresses, transfers, or schedules.
 
