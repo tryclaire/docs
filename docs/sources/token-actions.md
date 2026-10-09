@@ -22,7 +22,7 @@ Removing the designation or a member does not revoke wallet keys, on-chain right
 
 1. Deploy your workspace's **Claire fee router** from the designated wallet. Set the project-holder share of trading revenue when you deploy it; it cannot change afterwards. Each router launches one token.
 2. Enter launch details on the chosen network. Robinhood pons v2 uses native ETH or a pair token that pons approves, and offers a creator tax; buybacks stay off. Stockereum v3 uses an enabled quote and a permitted swap fee. Creator fees go to your fee router, so Stockereum's holder-reward routing is not offered. Review the live factory settings and costs. An optional initial buy, where available, spends the pair token or wallet ETH.
-3. Approve the Claire launch fee to your fee router, and for a pons pair token also the exact initial buy. The router takes them in the launch transaction.
+3. Approve the Claire launch fee to your fee router, and for a pons pair token also the exact initial buy. The router takes them in the launch transaction. If the designated wallet lacks the fee's stablecoin, Claire first offers **Buy with ETH**: one Uniswap swap that buys exactly the missing amount, capped at 1% above the quote, and refunds unused ETH in the same transaction.
 4. Select **Prepare launch**. Review the network, wallet, destination contract, calldata, ETH value, nonce, and costs before signing. Preparing is not submission; submission is not confirmation.
 5. Check **Transaction history and recovery** until the transaction is verified. Use **Refresh** or attach the known transaction hash if submission is uncertain. **Do not resend** an uncertain transaction or abandon it unless you know it was never sent. Confirmations reduce, but do not eliminate, reorganization risk.
 6. A verified launch is linked automatically only if the initiating user still has owner/admin access, the wallet designation is unchanged, and no different token is linked. A confirmed transaction can remain unassociated if those checks fail; read its status instead of launching again.
@@ -41,7 +41,7 @@ Vesting requires a linked supported pons v2 or Stockereum v3 token that the chai
 
 Sablier allocations are **noncancelable and nontransferable**. A Claire lock is noncancelable and nontransferable unless you turn on cancellation or beneficiary transfer before funding. Verify the beneficiaries, amounts, and dates carefully before funding.
 
-1. Prepare and sign the exact ERC-20 approval from the designated wallet, unless sufficient allowance is already available. Approval grants the lock contract an allowance; it does not fund a lock. For a token launched elsewhere, also approve the Claire lock fee. Wait for confirmation.
+1. Prepare and sign the exact ERC-20 approval from the designated wallet, unless sufficient allowance is already available. Approval grants the lock contract an allowance; it does not fund a lock. For a token launched elsewhere, also approve the Claire lock fee; if the wallet lacks the fee's stablecoin, buy it with ETH first, as for the launch fee. Wait for confirmation.
 2. Separately prepare, review, sign, and confirm the funding transaction, which deposits the tokens into the lock contract.
 3. Check the recorded outcome. Approval and funding each need gas. Review the destination, calldata, value, and nonce each time, and use the same recovery procedure if submission is uncertain.
 
@@ -73,7 +73,7 @@ When it is enabled, every token launch through Claire goes through the workspace
 | Holder sharing off | 5 | 5 | 90 | 0 |
 | Holder sharing at 50% | 5 | 5 | 40 | 50 |
 
-**Service fees** are fixed amounts of one USD stablecoin per chain, with no price oracle, so a depeg changes their real value but not the amount charged. Each fee is split evenly between the Claire treasury and $CLAIRE holders, and is separate from gas and launchpad fees:
+**Service fees** are fixed amounts of one USD stablecoin per chain (USDG on Robinhood Chain, USDC on Ethereum), with no price oracle, so a depeg changes their real value but not the amount charged. You can pay them with ETH through the swap step above. Each fee is split evenly between the Claire treasury and $CLAIRE holders, and is separate from gas and launchpad fees:
 
 - **Launch:** USD 10, taken by the router in the launch transaction and charged only if the launch succeeds.
 - **Locking a token launched elsewhere:** USD 25 per funding transaction, however many beneficiaries. It is never a share of the locked tokens.
