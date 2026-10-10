@@ -49,7 +49,7 @@ Sablier allocations are **noncancelable and nontransferable**. A Claire lock is 
 
 After funding is verified and associated with the workspace, an owner or admin can **Publish** the lock. The organization site links to `/locks/<chainId>/<streamId>` for a Sablier stream or `/locks/<chainId>/claire-<lockId>` for a Claire lock, where anyone can inspect the beneficiary, schedule, contract, funding transaction, and on-chain locked, claimable, and withdrawn amounts.
 
-This is evidence of a particular allocation, **not** an audit, endorsement, payout guarantee, or liquidity lock. Unpublishing removes Claire's public listing/proof access; it does not hide on-chain addresses, transfers, or schedules.
+This is evidence of a particular allocation, **not** an endorsement, payout guarantee, or liquidity lock. Unpublishing removes Claire's public listing/proof access; it does not hide on-chain addresses, transfers, or schedules.
 
 At `/vesting/<chainId>/<streamId>`, a signed-in user can connect a wallet and prepare a beneficiary payout claim for a Sablier stream without joining the organization. Anyone may submit and pay the network gas and quoted Sablier withdrawal fee, but tokens go only to the beneficiary recorded on-chain. The claim withdraws what is available when it executes; the displayed amount may change. A Claire lock is claimed from the funding organization's Vesting page, or by anyone calling `claim` on the lock contract; it also pays only the beneficiary and charges no claim fee.
 
@@ -58,7 +58,7 @@ Vesting with time alone does not send tokens automatically. Check the transactio
 ## Planned: Claire protocol fees
 
 > [!IMPORTANT]
-> The Claire protocol is planned and not available. Its contracts are not deployed to any public network and have not been audited, so nothing below can be used today. The design can change before release, and none of it is a promise of income or returns.
+> The Claire protocol is planned and not available. Its contracts are not deployed to any public network, so nothing below can be used today. The design can change before release, and none of it is a promise of income or returns.
 
 When it is enabled, every token launch through Claire goes through the workspace's own **fee router**. The router carries out the launch on pons v2 or Stockereum v3 and becomes the token's creator-fee recipient. There is no fee-free launch path through Claire. Launchpad settings that keep fees flowing to the router stay available, including the quote asset, tax rate, fee tier and initial buy. Stockereum's holder-reward mode is not available, because it would bypass the router.
 
