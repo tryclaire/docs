@@ -17,7 +17,7 @@ In your personal **$CLAIRE** page, connect a wallet and sign a one-time message 
 - **Threshold:** 2,500 $CLAIRE held across your verified wallets. Only wallet balances count; $CLAIRE in locks, vesting or unclaimed distribution rounds does not.
 - **One finalized block for everyone:** Claire reads balances at a finalized Ethereum block that its $CLAIRE holder index fully covers, for every account at the same block, so moving tokens between wallets cannot qualify two accounts. Holdings are checked about every 15 minutes and after you verify or unlink a wallet. If the data is unavailable, nothing is granted or removed.
 - **One target:** the top plan applies to you or to one organization you belong to. You can move it once every 30 days; if you leave that organization, it stops applying there and you can move it right away.
-- **Nothing is deleted:** if your verified holding falls below 2,500, only this benefit ends. Items created above the lower limits are kept and only new ones are refused. An independently paid plan is never overridden or removed; no paid plan is offered today.
+- **Nothing is deleted:** if your verified holding falls below 2,500, only this benefit ends. Items created above the lower limits are kept and only new ones are refused. A Pro plan the organization paid for is never overridden or removed.
 
 | Limit | Early access | Top plan |
 | --- | --- | --- |
@@ -29,21 +29,26 @@ In your personal **$CLAIRE** page, connect a wallet and sign a one-time message 
 
 Early access applies everywhere today. The Developer API's per-IP limit is the same on both. Responses report the applicable limit in `RateLimit-Limit`.
 
+## Pro plan
+
+An organization can buy the same limits as the top plan without holding $CLAIRE: **USD 49 per 30 days**, prepaid, no auto-renewal. Owners and admins pay from the organization's designated wallet in Organization › Plan → Pay for Pro (`/token/manage?plan=1`), in USDG on Robinhood Chain or USDC on Ethereum, or by buying the stablecoin with ETH in one swap first. The payment goes to the Claire treasury and confirms on-chain; paying while Pro is active extends the paid period from its current end. Pro payments become available once the Claire protocol is deployed on that chain.
+
 ## Referral rewards
 
 Your invite link on the personal **Referrals** page counts link opens (unverified), sign-ups and paying projects separately. An organization keeps the referrer of the account that created it.
 
-When such an organization pays a Claire service fee that confirms on-chain, you receive **5% of Claire's treasury half** of that fee, or **7.5%** if your verified holding qualifies when the reward is recorded:
+When such an organization pays a Claire service fee or a Pro plan payment that confirms on-chain, you receive **5% of Claire's treasury share** of that payment, or **7.5%** if your verified holding qualifies when the reward is recorded:
 
-| Service fee | Claire treasury half | Reward at 5% | Reward at 7.5% |
+| Payment | Claire treasury share | Reward at 5% | Reward at 7.5% |
 | --- | --- | --- | --- |
 | Launch, USD 10 | 5 | 0.25 | 0.375 |
 | Locking a token launched elsewhere, USD 25 | 12.5 | 0.625 | 0.9375 |
+| Pro plan, USD 49 | 49 | 2.45 | 3.675 |
 
 - A reward is never a share of trading revenue, of the $CLAIRE holder half or of project-holder funds.
 - Self-referrals are void: there is no reward when you belong to the paying organization, made the payment yourself, or paid from one of your verified wallets. If a payment is reorganized off the chain and confirms again, this is checked again.
 - A reward becomes payable once the payment's block is finalized. Claire's treasury then funds payable rewards in a claim round on the fee's chain, in the fee's stablecoin (USDG on Robinhood Chain, USDC on Ethereum). Funding a round is not a payout: the reward reaches your payout wallet when a claim is submitted, by you or anyone. A reward waits while you have no verified payout wallet.
-- No paid plan, price or payment provider exists. A future plan payment would be recorded for its referrer without an amount until Claire's share of plan revenue and a settlement path are decided.
+- Pro payments are referral payments like service fees; the whole amount is treasury share, so the reward is 5% or 7.5% of USD 49 on the chain it was paid on.
 
 ## Launch airdrops to $CLAIRE holders
 
