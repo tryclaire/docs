@@ -6,7 +6,7 @@ order: 15
 # $CLAIRE holders and referrals
 
 > [!IMPORTANT]
-> Planned and not available. Holder benefits need $CLAIRE to exist; referral payouts need the [Claire protocol](../sources/token-actions.md#planned-claire-protocol-fees) to be deployed; launch airdrops need both. Neither has happened: no $CLAIRE address is published, and the contracts are not deployed to any public network and have not been audited. Until then Claire shows **$CLAIRE is not live yet** and checks no holdings. The rules below describe the current implementation; they can change before release and are not a promise of income, rewards or returns.
+> Planned and not available. Holder benefits need $CLAIRE to exist; referral payouts need the [Claire protocol](../sources/token-actions.md#planned-claire-protocol-fees) to be deployed; launch airdrops need both. Neither has happened: no $CLAIRE address is published, and the contracts are not deployed to any public network. Until then Claire shows **$CLAIRE is not live yet** and checks no holdings. The rules below describe the current implementation; they can change before release and are not a promise of income, rewards or returns.
 
 ## Verify a wallet
 

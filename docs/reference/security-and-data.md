@@ -15,7 +15,7 @@ A Knowledge item's **public reference** classification does not publish it or gr
 
 Only an owner designates a [token signing wallet](../sources/token-actions.md), separately for each chain. Owners and admins can prepare token actions and publish vesting links, but the designated wallet must sign organization transactions. Removing app access does not revoke wallet keys or on-chain rights.
 
-Funding a vesting stream exposes addresses, amounts, and its schedule on-chain even without a Claire proof page. Publishing additionally lists a public proof on the site; unpublishing does not make the underlying on-chain data private. A proof is not an audit, liquidity lock, or investment guarantee.
+Funding a vesting stream exposes addresses, amounts, and its schedule on-chain even without a Claire proof page. Publishing additionally lists a public proof on the site; unpublishing does not make the underlying on-chain data private. A proof is not a liquidity lock or investment guarantee.
 
 The official [`@tryclaire/sdk`](developer-api.md) is a REST client for scoped API keys, not an MCP client or an additional grant of access. [Native MCP](mcp.md) uses its own method permission on a shared workspace credential. Keep keys out of browser bundles, public variables and source control. Installing the package does not connect a workspace or create a credential.
 

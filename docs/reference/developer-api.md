@@ -46,13 +46,7 @@ Existing scoped endpoints for Knowledge, Assets, Telegram, X and token remain av
 
 ## Use the REST SDK
 
-The published npm SDK supports the existing endpoints; **the source-first methods below are merged in the SDK repository but are not yet released to npm.** The new methods are `claire.sources.list()`, `claire.search(query)`, `claire.people.list(query)` and `claire.people.get(key)`. To use them now, install the verified SDK source revision:
-
-```sh
-npm install github:tryclaire/sdk#17e558e4114230610a430f80f953cd7bfc902016
-```
-
-Git installs build the package during installation. If npm 12 blocks Git dependencies, add `--allow-git=root`; see the [SDK installation guidance](https://github.com/tryclaire/sdk/blob/main/CONTRIBUTING.md#installing-unreleased-versions).
+Install the SDK with `npm install @tryclaire/sdk` (0.3.0 or later). It includes `claire.sources.list()`, `claire.search(query)`, `claire.people.list(query)` and `claire.people.get(key)`.
 
 ```js
 import { Claire } from "@tryclaire/sdk";
