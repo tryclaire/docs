@@ -31,7 +31,7 @@ Early access applies everywhere today. The Developer API's per-IP limit is the s
 
 ## Pro plan
 
-An organization can buy the same limits as the top plan without holding $CLAIRE: **USD 49 per 30 days**, prepaid, no auto-renewal. Owners and admins pay from the organization's designated wallet in Organization › Plan → Pay for Pro (`/token/manage?plan=1`), in USDG on Robinhood Chain or USDC on Ethereum, or by buying the stablecoin with ETH in one swap first. The payment goes to the Claire treasury and confirms on-chain; paying while Pro is active extends the paid period from its current end. Pro payments become available once the Claire protocol is deployed on that chain.
+An organization can buy the same limits as the top plan without holding $CLAIRE: **USD 49 per 30 days**, prepaid, no auto-renewal. Owners and admins pay from the organization's designated wallet in **Settings → General → Plan → Get Pro**, in USDG on Robinhood Chain or USDC on Ethereum, or by buying the stablecoin with ETH in one swap first. The payment goes to the Claire treasury and confirms on-chain; paying while Pro is active extends the paid period from its current end. Pro payments become available once the Claire protocol is deployed on that chain.
 
 ## Referral rewards
 
