@@ -14,10 +14,10 @@ In your personal **$CLAIRE** page, connect a wallet and sign a one-time message 
 
 ## Holder benefits
 
-- **Threshold:** 2,500 $CLAIRE held across your verified wallets. Only wallet balances count; $CLAIRE in locks, vesting or unclaimed distribution rounds does not.
+- **Threshold:** 25,000 $CLAIRE held across your verified wallets. Only wallet balances count; $CLAIRE in locks, vesting or unclaimed distribution rounds does not.
 - **One finalized block for everyone:** Claire reads balances at a finalized Ethereum block that its $CLAIRE holder index fully covers, for every account at the same block, so moving tokens between wallets cannot qualify two accounts. Holdings are checked about every 15 minutes and after you verify or unlink a wallet. If the data is unavailable, nothing is granted or removed.
 - **One target:** the top plan applies to you or to one organization you belong to. You can move it once every 30 days; if you leave that organization, it stops applying there and you can move it right away.
-- **Nothing is deleted:** if your verified holding falls below 2,500, only this benefit ends. Items created above the lower limits are kept and only new ones are refused. A Pro plan the organization paid for is never overridden or removed.
+- **Nothing is deleted:** if your verified holding falls below 25,000, only this benefit ends. Items created above the lower limits are kept and only new ones are refused. A Pro plan the organization paid for is never overridden or removed.
 
 | Limit | Early access | Top plan |
 | --- | --- | --- |
@@ -69,6 +69,6 @@ These are not decided, and nothing above should be read as their answer:
 - A paid plan's price and provider, Claire's share of plan revenue and how its referral rewards would be settled.
 - Who prepares referral payout rounds and which address publishes them in production.
 - The production list of addresses excluded from airdrop snapshots.
-- Whether $CLAIRE in locks, vesting or unclaimed rounds should count toward 2,500.
+- Whether $CLAIRE in locks, vesting or unclaimed rounds should count toward 25,000.
 - Whether unclaimed airdrop allocations should ever expire.
 - The $CLAIRE token address.
