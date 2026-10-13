@@ -14,7 +14,7 @@ New pons v2 and Stockereum v3 launches, linking, and vesting require a [designat
 
 ## Inspect observations
 
-The Token page brings together market observations, on-chain launch information, transfers, holders, historical snapshots, and available creator fee information. Provider observations and the holder index have their own timestamps. A page load is not proof that upstream data was just collected.
+**Token** brings together the market (a price or holders chart, recent trades and top holders) and, beside it, the token itself, its market figures and its creator fees. **Creator fees**, **Vesting** and **Snapshots** are its sub-pages. Provider observations and the holder index have their own timestamps. A page load is not proof that upstream data was just collected.
 
 The launch protocols have different economics: pons v2 uses a native-ETH curve before graduation; Stockereum v3 uses permanent Uniswap V4 liquidity with an enabled quote, without a bonding curve or graduation stage. Stock-linked assets carry issuer, oracle, market, and securities-compliance risks.
 
