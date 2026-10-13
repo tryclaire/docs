@@ -12,7 +12,7 @@ Claire brings Telegram and X activity, supported token observations, team contex
 ## Start here
 
 1. [Create a workspace](getting-started/index.md) and invite your team.
-2. [Connect a source](sources/index.md) to see its collected activity; [Context and Assets](sources/context.md) explain how to organize it and control agent access.
+2. [Connect a source](sources/index.md) to see its collected activity; [Knowledge and Assets](sources/context.md) explain how to organize it and control agent access.
 3. [Set up your public site](publishing/index.md) when you are ready to publish.
 
 Your personal account is separate from workspaces. Each workspace has its own members, integrations, site, docs, assets, and access controls. You can belong to more than one workspace.
@@ -22,7 +22,7 @@ Your personal account is separate from workspaces. Each workspace has its own me
 | Section | What you will find |
 | --- | --- |
 | [Getting started](getting-started/index.md) | Workspace creation, invitations, and roles. |
-| [Sources](sources/index.md) | Telegram, X, token data, wallet-signed token actions, Context, and Assets. |
+| [Sources](sources/index.md) | Telegram, X, token data, wallet-signed token actions, Knowledge, and Assets. |
 | [Publishing](publishing/index.md) | Public profile, domains, and docs from Claire or GitHub. |
 | [Automations](automations/index.md) | Telegram rules, scheduled actions, and notifications. |
 | [Reference](reference/index.md) | Limits, developer REST API, native MCP, SDK, security, data, and planned $CLAIRE holder benefits and referrals. |

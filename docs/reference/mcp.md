@@ -8,7 +8,7 @@ order: 13
 **Developers → Connect** (MCP) shows a read-only [Streamable HTTP](https://modelcontextprotocol.io/specification/2025-06-18/basic/transports) endpoint at `/api/mcp` on the app's origin. Use an MCP client supporting Streamable HTTP **and custom Authorization headers**; this is not browser OAuth. The [REST SDK](developer-api.md) does not implement MCP, and an API-only legacy key cannot connect.
 
 1. An owner or admin enables **MCP** (or both API and MCP) for a workspace key on the **Developers** page, chooses read scopes and a 7-, 30- or 90-day expiry. Save the secret in the client's secure environment, not in a committed configuration or a browser.
-2. In **Knowledge → Context → Sources**, include the needed sources and explicitly approve **Agents** for each. Agent access starts off. Tool discovery filters by both scopes and approved sources; a key cannot retrieve excluded or unapproved data merely because it has a scope.
+2. In **Knowledge**, keep the needed sources on (**Claire uses**) and explicitly approve **Agents read** for each. Agent access starts off. Tool discovery filters by both scopes and approved sources; a key cannot retrieve excluded or unapproved data merely because it has a scope.
 3. Copy the server URL from **Developers → Connect** (MCP) into `CLAIRE_MCP_URL` in your client's launch environment. Set `CLAIRE_API_KEY` there to the shared credential's secret. For Cursor, add this to your private `~/.cursor/mcp.json`, then connect and discover tools:
 
 ```json
