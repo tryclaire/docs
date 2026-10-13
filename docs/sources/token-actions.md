@@ -5,14 +5,14 @@ order: 7
 
 # Token actions
 
-Use **Token actions** in your organization's Token area to designate a signing wallet, launch a supported token, and fund or publish a vesting allocation. Robinhood Chain uses pons v2; Ethereum uses Stockereum v3. Both networks require ETH for gas. Token tools are optional.
+In **Token**, the **signing wallet** button designates the organization's wallet and lists its transactions. With no token linked, **Launch a token** opens the launch setup, saved as a draft until you launch it; once a token is linked, **Vesting** funds and publishes locks. Robinhood Chain uses pons v2; Ethereum uses Stockereum v3. Both networks require ETH for gas. Token tools are optional.
 
 > [!IMPORTANT]
 > New launches and new vesting locks run only through the [Claire protocol](#planned-claire-protocol-fees), which is not deployed yet, so they are unavailable until it is. Linking an existing token, holder data, published proofs and claims for existing allocations keep working. Ethereum/Stockereum availability is also rollout-gated; confirm the network and available actions in Claire before funding a wallet or promising a launch.
 
 ## Verify the organization's wallet
 
-1. Select the network and connect the wallet that will sign. Each chain has its own designated wallet.
+1. Open the signing wallet, then select the network and the wallet that will sign. A plain wallet (no contract code on any Claire network) designated with one signature also becomes the wallet on each other network that has none yet; a contract wallet is designated per network.
 2. An **organization owner** signs a short-lived verification challenge to prove control. This verifies the designation; it does not transfer funds or give Claire spending authority. Only the owner can designate or remove the wallet.
 3. Owners and admins can prepare launches and locks, but the **designated wallet must sign**. Being an admin does not give someone another person's wallet keys. Members cannot manage launches or vesting allocations.
 
@@ -23,17 +23,17 @@ Removing the designation or a member does not revoke wallet keys, on-chain right
 1. Deploy your workspace's **Claire fee router** from the designated wallet. Set the project-holder share of trading revenue when you deploy it; it cannot change afterwards. Each router launches one token.
 2. Enter launch details on the chosen network. Robinhood pons v2 uses native ETH or a pair token that pons approves, and offers a creator tax; buybacks stay off. Stockereum v3 uses an enabled quote and a permitted swap fee. Creator fees go to your fee router, so Stockereum's holder-reward routing is not offered. Review the live factory settings and costs. An optional initial buy, where available, spends the pair token or wallet ETH.
 3. Approve the Claire launch fee to your fee router, and for a pons pair token also the exact initial buy. The router takes them in the launch transaction. If the designated wallet lacks the fee's stablecoin, Claire first offers **Buy with ETH**: one Uniswap swap that buys exactly the missing amount, capped at 1% above the quote, and refunds unused ETH in the same transaction.
-4. Select **Prepare launch**. Review the network, wallet, destination contract, calldata, ETH value, nonce, and costs before signing. Preparing is not submission; submission is not confirmation.
-5. Check **Transaction history and recovery** until the transaction is verified. Use **Refresh** or attach the known transaction hash if submission is uncertain. **Do not resend** an uncertain transaction or abandon it unless you know it was never sent. Confirmations reduce, but do not eliminate, reorganization risk.
+4. When the draft passes its checks, select **Launch** to walk through the signed transactions. Each one is prepared and shown for review first: the network, wallet, destination contract, calldata, ETH value, nonce, and costs. Preparing is not submission; submission is not confirmation.
+5. Follow each transaction in the signing wallet's **Transactions** until it is verified. If submission is uncertain, use **Check or recover** to refresh it from the chain or verify a transaction hash you know was sent. **Do not resend** an uncertain transaction or abandon it unless you know it was never sent. Confirmations reduce, but do not eliminate, reorganization risk.
 6. A verified launch is linked automatically only if the initiating user still has owner/admin access, the wallet designation is unchanged, and no different token is linked. A confirmed transaction can remain unassociated if those checks fail; read its status instead of launching again.
 
-To link an existing supported token, use **Organization → Connections**, select its network and enter its contract address. Claire verifies the chain, factory, and designated wallet requirements. One workspace has one active linked token; resolve its existing link before starting a different launch.
+To link an existing supported token, use **Link your token** on the Token page or **Settings → Connections**, select its network and enter its contract address. Claire verifies the chain, factory, and designated wallet requirements. One workspace has one active linked token; resolve its existing link before starting a different launch.
 
 The protocols have different economics. Stock-linked assets also involve issuer, oracle, market, and securities-compliance risks. See the [Token guide](token.md) before interpreting market or creator-fee figures.
 
 ## Fund a vesting allocation
 
-Vesting requires a linked supported pons v2 or Stockereum v3 token that the chain's designated wallet launched. Enter the beneficiaries, exact token amounts, and UTC schedule. Claire uses its own **Claire token lock**, which holds many beneficiaries on one schedule; tokens launched through Claire can also use **Sablier Lockup v4**. Both support:
+Vesting requires a linked supported pons v2 or Stockereum v3 token that the chain's designated wallet launched. In **Vesting**, **New lock** opens a step-by-step dialog: enter the beneficiaries, exact token amounts, and UTC schedule. Claire uses its own **Claire token lock**, which holds many beneficiaries on one schedule; tokens launched through Claire can also use **Sablier Lockup v4**. Both support:
 
 - **Timelock:** the full amount becomes claimable at the end.
 - **Linear:** tokens become claimable progressively between start and end.

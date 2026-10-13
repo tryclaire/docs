@@ -10,16 +10,16 @@ Set up a public profile and publish docs from Claire or a GitHub repository. You
 ## Set up your public site
 
 1. In Site, set your project's public profile, logo, and accent.
-2. Publish pages in Site › Docs to make them visible in your site's docs section.
+2. Publish pages in **Docs** to make them visible in your site's docs section.
 3. Optionally connect a custom domain for the profile or docs. A profile domain serves docs at `/docs`; a dedicated docs domain serves them at its root. Custom domains are included for the first 50 projects that connect one; after that, connecting a domain requires the top plan. A project that already has a domain can keep adding more.
 
-Documents added through **Context** start as private unpublished drafts. A **public reference** classification or external read access does not publish a page. Review and publish a page in Site › Docs deliberately. This does **not** change GitHub Site sync: imported pages still publish immediately.
+New docs pages start as private unpublished drafts. A **public reference** classification or external read access does not publish a page. Review and publish a page in **Docs** deliberately. This does **not** change GitHub Site sync: imported pages still publish immediately.
 
 ## Sync docs from GitHub
 
 ### Public repository
 
-1. In Site › Docs, paste the GitHub URL or `owner/repo`.
+1. In **Docs**, paste the GitHub URL or `owner/repo`.
 2. Select a branch and optional folder.
 
 ### Private repository

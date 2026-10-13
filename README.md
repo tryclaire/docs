@@ -37,7 +37,7 @@ This repository (`tryclaire/docs`, branch `main`, folder `docs`) is the connecte
 enqueues a Claire sync; pages publish without a separate approval step. CI checks the
 repository but does not publish anything.
 
-After merging, check Site → Docs sync status and the rendered navigation before announcing
+After merging, check the Docs sync status and the rendered navigation before announcing
 a change as live. Do not document rollout-gated features (such as Ethereum/Stockereum
 availability) as generally available until they are verified in production.
 

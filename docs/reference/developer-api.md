@@ -6,7 +6,7 @@ order: 12
 # Developer REST API and SDK
 
 > [!IMPORTANT]
-> Existing API keys remain API-only. Source access starts off: an owner or admin must approve the needed sources in **Knowledge → Context → Sources** (the **Agents** switch) before integrations can read them.
+> Existing API keys remain API-only. Source access starts off: an owner or admin must turn on **Agents read** for the needed sources in **Knowledge** before integrations can read them.
 
 Use Claire's read-only REST API from a server, CLI or agent to inspect a workspace's persisted context. The zero-runtime-dependency TypeScript/JavaScript `@tryclaire/sdk` is a **REST client**, not an MCP implementation. For a native tool connection, see [MCP](mcp.md). Neither method publishes content, sends messages or signs transactions.
 
@@ -16,7 +16,7 @@ Use Claire's read-only REST API from a server, CLI or agent to inspect a workspa
 2. Enable **API**, **MCP** or both, choose only the needed read scopes and select a 7-, 30- or 90-day expiry. Previously issued API keys remain API-only.
 3. Copy the secret when it appears; Claire retains a hash, not a recoverable copy. Revoke it when no longer needed. Changing its methods or scopes requires explicit manager approval and does not rotate the secret or expiry.
 
-A key stops working if its issuer loses owner or admin membership. Store it in your server environment or agent's secret store, never in browser code, a public variable, a skill file or source control. In **Knowledge → Context → Sources**, the source must also be included **and** explicitly approved for **Agents**; approval defaults off. Existing keys receive no source data until an owner or admin approves the needed sources: lists may be empty and details may return 404. Neither a granted scope nor API/MCP method access alone exposes a source. See [Context and Assets](../sources/context.md).
+A key stops working if its issuer loses owner or admin membership. Store it in your server environment or agent's secret store, never in browser code, a public variable, a skill file or source control. In **Knowledge**, the source must also be used (**Claire uses**) **and** explicitly approved (**Agents read**); approval defaults off. Existing keys receive no source data until an owner or admin approves the needed sources: lists may be empty and details may return 404. Neither a granted scope nor API/MCP method access alone exposes a source. See [Knowledge and Assets](../sources/context.md).
 
 | Scope | Read access when its sources are externally approved |
 | --- | --- |
@@ -29,7 +29,7 @@ A key stops working if its issuer loses owner or admin membership. Store it in y
 
 ## Start with the sources
 
-For document search, use an API-enabled key with `context:read` and `knowledge:read`, and enable **Agent access** for Documents. `context:read` alone does not expose documents. Set `CLAIRE_API_URL` to the API base URL shown under **Developers → Connect** (API), including `/api/v1`, and set `CLAIRE_API_KEY` in your secret environment:
+For document search, use an API-enabled key with `context:read` and `knowledge:read`, and turn on **Agents read** for Documents. `context:read` alone does not expose documents. Set `CLAIRE_API_URL` to the API base URL shown under **Developers → Connect** (API), including `/api/v1`, and set `CLAIRE_API_KEY` in your secret environment:
 
 ```sh
 curl --header "Authorization: Bearer $CLAIRE_API_KEY" \

@@ -13,7 +13,7 @@ An owner or admin signs in through the workspace's X integration to prove contro
 
 ## Inspect activity and freshness
 
-The workspace displays the connected profile, recent authored posts and replies, post engagement, follower snapshots, and collected mentions. X › Mentions reads stored collection results. Check collection health and the last successful update to see whether the view is current.
+**Social** displays the connected profile, recent authored posts and replies, post engagement, follower snapshots, the people who mention you most, and collected mentions. Its **Mentions** view reads stored collection results, and **Needs reply** lists stored mentions that none of your recent posts answer. Check the account's collection status and the last successful update to see whether the view is current.
 
 Public search and indexing can lag, so a mention may not appear immediately or at all.
 

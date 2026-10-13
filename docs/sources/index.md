@@ -18,9 +18,9 @@ Connect the sources your workspace uses to inspect collected activity. A token i
 
 Ethereum/Stockereum support is rollout-gated. Confirm availability for your selected network before relying on Ethereum launch, linking, or vesting actions.
 
-## Organize workspace context
+## Organize what Claire knows
 
-[Context and Assets](context.md) describes Knowledge navigation, source inclusion, People and private drafts. Connecting a source does not automatically permit external agent access.
+[Knowledge and Assets](context.md) describes the Knowledge page, the Claire uses and Agents read switches, People and private drafts. Connecting a source does not automatically permit external agent access.
 
 ## Check collection status
 

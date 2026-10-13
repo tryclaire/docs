@@ -9,7 +9,7 @@ Workspace content is available to authorized members, while sensitive management
 
 ## Control workspace access
 
-Only the owner can change another member's role or transfer ownership. Developer credentials belong to one workspace, have explicit read scopes and require the issuing manager to keep their role. The **Developers** page sets each key to API, MCP or both; pre-existing keys remain API-only. Source inclusion in **Knowledge → Context → Sources** and separate explicit agent access approval (off by default) are both required in addition to matching scopes.
+Only the owner can change another member's role or transfer ownership. Developer credentials belong to one workspace, have explicit read scopes and require the issuing manager to keep their role. The **Developers** page sets each key to API, MCP or both; pre-existing keys remain API-only. A source must be used (**Claire uses**) and separately approved for agents (**Agents read**, off by default) in **Knowledge**, in addition to matching scopes.
 
 A Knowledge item's **public reference** classification does not publish it or grant public access. Unpublished docs drafts are private on the site, but **private/unpublished is not integration-private**: approving Agent access for Documents or Notes lets credentials with `knowledge:read` read private drafts or team notes, and agent providers may receive that content. Approving Telegram chats likewise lets credentials with `telegram:read` read stored conversations, including private linked groups or channels. External People reads still exclude private person notes. A file explicitly marked **public** in Assets has a public file URL; do not mark confidential files public. Relative images imported with GitHub docs are copied into public Assets.
 
@@ -24,7 +24,7 @@ The official [`@tryclaire/sdk`](developer-api.md) is a REST client for scoped AP
 
 ## Understand stored data
 
-Claire retains connected source data and operational records. A linked Telegram chat's messages and activity are stored from the time the bot joins. Disconnecting a source does not automatically delete collected history. Excluding a source from Context does not disconnect or delete it.
+Claire retains connected source data and operational records. A linked Telegram chat's messages and activity are stored from the time the bot joins. Disconnecting a source does not automatically delete collected history. Turning a source off in Knowledge does not disconnect or delete it.
 
 GitHub docs and team notes have different origins: edit synced docs at their repository source, while notes can be edited in Claire. Asset metadata does not mean Claire has indexed or read the asset's contents. External People reads expose only approved Telegram/X activity and platform identities, not Claire profiles, private person notes or live avatars.
 
