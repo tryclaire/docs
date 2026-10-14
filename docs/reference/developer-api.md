@@ -12,7 +12,7 @@ Use Claire's read-only REST API from a server, CLI or agent to inspect a workspa
 
 ## Create a credential
 
-1. On the **Developers** page, an owner or admin creates a named key for one workspace.
+1. On the **Developers** page, an owner or admin creates a named key for one workspace. The same page shows the address and a first request for MCP or the API, and how often agents have read the workspace.
 2. Enable **API**, **MCP** or both, choose only the needed read scopes and select a 7-, 30- or 90-day expiry. Previously issued API keys remain API-only.
 3. Copy the secret when it appears; Claire retains a hash, not a recoverable copy. Revoke it when no longer needed. Changing its methods or scopes requires explicit manager approval and does not rotate the secret or expiry.
 
