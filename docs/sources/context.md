@@ -11,7 +11,7 @@ order: 8
 
 Each source in **Knowledge** has two switches: **Claire uses** and **Agents read**. Notes have the same two switches at the bottom of their list. Sources Claire uses can be searched by authorized workspace members; turning a source off hides it from Knowledge and agent reads without disconnecting or deleting it. The two switches are separate. **Agents read** starts off, and an owner or admin must explicitly approve each source, after a confirmation, before any developer API or MCP credential can read it. A credential also needs the matching read scope. Granting a scope alone does not expose an unapproved source. Review source status and timestamps before relying on search results; unavailable, stale or synthetic data are not current provider evidence.
 
-Knowledge also shows how often agents read the workspace over the last 30 days, split between MCP and the API, with the number of active keys and the latest read.
+Knowledge and the **Developers** page both show how often agents read the workspace over the last 30 days, split between MCP and the API, with the number of active keys and the latest read.
 
 People in the external read interface come only from approved Telegram chats or X activity with matching read scopes. Identifiers remain platform-specific, not proof that accounts belong to the same person. Claire profiles, private person notes and live avatars are not disclosed through those reads. The in-app People directory and external People reads are not interchangeable.
 
