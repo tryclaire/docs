@@ -25,7 +25,7 @@ A key stops working if its issuer loses owner or admin membership. Store it in y
 | `assets:read` | File and folder metadata, not private object keys, file content or signed URLs. |
 | `telegram:read` | Linked chats, stored messages and Telegram-sourced People. |
 | `x:read` | Stored mentions and X-sourced People. |
-| `token:read` | Stored token identity and observations. |
+| `token:read` | Stored token identity and observations, plus the organization's Claire locks, fee routers and distribution rounds. |
 
 ## Start with the sources
 
@@ -46,7 +46,7 @@ Existing scoped endpoints for Knowledge, Assets, Telegram, X and token remain av
 
 ## Use the REST SDK
 
-Install the SDK with `npm install @tryclaire/sdk` (0.3.0 or later). It includes `claire.sources.list()`, `claire.search(query)`, `claire.people.list(query)` and `claire.people.get(key)`.
+Install the SDK with `npm install @tryclaire/sdk` (0.5.0 or later). It includes `claire.sources.list()`, `claire.search(query)`, `claire.people.list(query)` and `claire.people.get(key)`. Version 0.5.0 also adds the `@tryclaire/sdk/protocol` subpath for [verifying launches, locks and rounds on-chain](verify-on-chain.md); it needs the optional `viem` peer dependency, and the root client stays dependency-free.
 
 ```js
 import { Claire } from "@tryclaire/sdk";
@@ -64,6 +64,24 @@ console.log(sources, results.items, results.hasMore, meta.freshness);
 ```
 
 Use Node.js 22 or newer with ESM. See the [SDK README](https://github.com/tryclaire/sdk#readme) for methods, pagination and configuration, and check the installed package version before using new methods. Read `/api/v1/openapi.json` on your selected instance for the matching REST schema, or use the [hosted API reference](https://app.tryclaire.net/developers).
+
+## Read token locks, fee routers and rounds
+
+Three read-only endpoints need `token:read` and the organization's approved token source. Each makes no RPC request and returns what Claire persisted from confirmed transactions. They are also MCP tools with the same scope; see [MCP](mcp.md).
+
+| Endpoint | MCP tool | Returns |
+| --- | --- | --- |
+| `GET /api/v1/token/locks` | `list_token_locks` | The organization's locks from confirmed funding receipts: `kind` (`time` or `revenue`), `chainId`, lock `contract` and `lockId`, `token`, `funder`, `beneficiary`, raw `amount`, `cancelable`, `transferable`, `fundingTransactionHash`, `published` and a public `id`. Time locks add `schedule` (`timelock`, `linear` or `catch-up-cliff`), `start`, `cliff` and `end`; for revenue locks those are `null` and `revenue` holds `router`, `asset` (the quote asset; the zero address is native ETH), `baseline`, `deadline` (Unix seconds) and `tranches` (`revenue` threshold in raw units and `bps`). `proofUrl` is set once the lock is published. Claimed and remaining amounts are on the proof page. |
+| `GET /api/v1/token/fee-routers` | `list_fee_routers` | The organization's confirmed fee routers: `router`, `factory`, `launchpad`, `creator`, `holderBps`, `projectHolderDistributor`, `claireHolderDistributor`, `treasury`, `launchedToken`, and `totals` per asset (the sums of confirmed harvests, in raw units of that asset: `harvests`, `received`, `revenue`, `creator`, `projectHolders`, `claireHolders`, `treasury`). |
+| `GET /api/v1/token/rounds` | `list_token_rounds` | The organization's confirmed project-holder and airdrop rounds, 20 per page (`page`): `purpose`, `distributor`, `roundId`, `asset`, `total`, `recipients`, `snapshotBlock`, `root`, `evidence`, `transactionHash` and `manifestUrl`. |
+
+Lock `id` values are the public proof IDs: `/locks/<chainId>/claire-<lockId>` for time locks and `/locks/<chainId>/revenue-<lockId>` for revenue locks. A revenue lock unlocks as the token's fee router collects revenue, counted from `baseline`, and fully at `deadline`; revenue counts everything the router collects from the launchpad escrow, including third-party credits to it. A round's `manifestUrl` serves the canonical manifest verbatim, and its keccak-256 is the round's on-chain `evidence`; rounds published before manifests existed have no `manifestUrl`. See [Verify on-chain](verify-on-chain.md#the-round-manifest) for the manifest format. Fee-router totals are Claire's record of confirmed harvests, not a chain read; check the router's `totalRevenue` on-chain when it matters.
+
+```sh
+curl --header "Authorization: Bearer $CLAIRE_API_KEY" "$CLAIRE_API_URL/token/locks"
+curl --header "Authorization: Bearer $CLAIRE_API_KEY" "$CLAIRE_API_URL/token/fee-routers"
+curl --get --header "Authorization: Bearer $CLAIRE_API_KEY" --data-urlencode 'page=1' "$CLAIRE_API_URL/token/rounds"
+```
 
 ## Read safely with an agent
 
