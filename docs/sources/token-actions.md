@@ -33,13 +33,13 @@ The protocols have different economics. Stock-linked assets also involve issuer,
 
 ## Fund a vesting allocation
 
-Vesting requires a linked supported pons v2 or Stockereum v3 token that the chain's designated wallet launched. In **Vesting**, **New lock** opens a step-by-step dialog: enter the beneficiaries, exact token amounts, and UTC schedule. Claire uses its own **Claire token lock**, which holds many beneficiaries on one schedule; tokens launched through Claire can also use **Sablier Lockup v4**. Both support:
+Vesting requires a linked supported pons v2 or Stockereum v3 token that the chain's designated wallet launched. In **Vesting**, **New lock** opens a step-by-step dialog: enter the beneficiaries, exact token amounts, and UTC schedule. A **Claire token lock** holds one or many beneficiaries on one schedule:
 
 - **Timelock:** the full amount becomes claimable at the end.
 - **Linear:** tokens become claimable progressively between start and end.
 - **Catch-up cliff:** nothing is claimable before the cliff; the fraction accrued since the start unlocks at the cliff, then vesting continues linearly.
 
-Sablier allocations are **noncancelable and nontransferable**. A Claire lock is noncancelable and nontransferable unless you turn on cancellation or beneficiary transfer before funding. Verify the beneficiaries, amounts, and dates carefully before funding.
+A lock is **noncancelable and nontransferable** by default. You can turn on cancellation or beneficiary transfer at creation, before funding. Verify the beneficiaries, amounts, and dates carefully before funding.
 
 1. Prepare and sign the exact ERC-20 approval from the designated wallet, unless sufficient allowance is already available. Approval grants the lock contract an allowance; it does not fund a lock. For a token launched elsewhere, also approve the Claire lock fee; if the wallet lacks the fee's stablecoin, buy it with ETH first, as for the launch fee. Wait for confirmation.
 2. Separately prepare, review, sign, and confirm the funding transaction, which deposits the tokens into the lock contract.
@@ -47,11 +47,11 @@ Sablier allocations are **noncancelable and nontransferable**. A Claire lock is 
 
 ## Publish proof and claim payouts
 
-After funding is verified and associated with the workspace, an owner or admin can **Publish** the lock. The organization site links to `/locks/<chainId>/<streamId>` for a Sablier stream or `/locks/<chainId>/claire-<lockId>` for a Claire lock, where anyone can inspect the beneficiary, schedule, contract, funding transaction, and on-chain locked, claimable, and withdrawn amounts.
+After funding is verified and associated with the workspace, an owner or admin can **Publish** the lock. The organization site links to `/locks/<chainId>/claire-<lockId>`, where anyone can inspect the beneficiary, schedule, contract, funding transaction, and on-chain locked, claimable, and withdrawn amounts.
 
 This is evidence of a particular allocation, **not** an endorsement, payout guarantee, or liquidity lock. Unpublishing removes Claire's public listing/proof access; it does not hide on-chain addresses, transfers, or schedules.
 
-At `/vesting/<chainId>/<streamId>`, a signed-in user can connect a wallet and prepare a beneficiary payout claim for a Sablier stream without joining the organization. Anyone may submit and pay the network gas and quoted Sablier withdrawal fee, but tokens go only to the beneficiary recorded on-chain. The claim withdraws what is available when it executes; the displayed amount may change. A Claire lock is claimed from the funding organization's Vesting page, or by anyone calling `claim` on the lock contract; it also pays only the beneficiary and charges no claim fee.
+Beneficiaries claim at `/vesting/<chainId>/claire-<lockId>`: a signed-in user can connect a wallet and prepare a payout claim without joining the organization. Anyone may submit and pay the network gas, or call `claim` on the lock contract directly, but tokens go only to the beneficiary recorded on-chain. The claim pays what is available when it executes; the displayed amount may change. Claims have no Claire fee.
 
 Vesting with time alone does not send tokens automatically. Check the transaction outcome before relying on a payout. These beneficiary payouts are distinct from [creator-fee figures](token.md#read-creator-fee-figures), which remain read-only in Claire.
 
@@ -78,7 +78,7 @@ When it is enabled, every token launch through Claire goes through the workspace
 - **Launch:** USD 10, taken by the router in the launch transaction and charged only if the launch succeeds.
 - **Locking a token launched elsewhere:** USD 25 per funding transaction, however many beneficiaries. It is never a share of the locked tokens.
 - **Locking a token launched through Claire:** free apart from gas. Eligibility comes from an on-chain registry that only Claire fee routers can write, for tokens they launched themselves. Importing or naming a token does not make it eligible.
-- **Claims, unlocks, cancellations and transfers:** no Claire fee; gas, and Sablier's withdrawal fee for Sablier-held allocations, still apply.
+- **Claims, unlocks, cancellations and transfers:** no Claire fee; gas still applies.
 
 Before you sign, Claire shows the exact payment token and amount, the launchpad's own fees and a gas estimate.
 
