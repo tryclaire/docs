@@ -7,7 +7,7 @@ order: 6
 
 Token tools are optional. Select the network and enter the contract address of a supported pons token on Robinhood Chain or Stockereum v3 token on Ethereum. Claire verifies the selected chain and supported launch factory. Your workspace has one active linked token at a time.
 
-New pons v2 and Stockereum v3 launches, linking, and vesting require a [designated signing wallet](token-actions.md). New launches and new vesting locks also require the planned Claire protocol, which is not deployed yet. Retained supported pons launches remain readable.
+New pons v2 and Stockereum v3 launches, linking, and vesting require a [designated signing wallet](token-actions.md). New launches and new vesting locks also require the Claire protocol, which is not deployed yet. Retained supported pons launches remain readable.
 
 > [!IMPORTANT]
 > Ethereum/Stockereum availability is rollout-gated. Confirm that Ethereum actions are available for your workspace before funding a wallet or promising a launch.
@@ -35,4 +35,4 @@ Where provided for pons, creator fee figures come from the launch contracts. Cla
 
 This read-only **creator-fee** display is separate from [wallet-signed launches, approvals, vesting funding, and beneficiary payout claims](token-actions.md). Claire does not custody funds or sign those transactions for you.
 
-The planned Claire protocol, which is not available yet, would route creator fees through a fee router instead. See [Planned: Claire protocol fees](token-actions.md#planned-claire-protocol-fees).
+Launches through the Claire protocol route creator fees through a fee router instead, and the **Creator fees** page then shows the router's total revenue. See [Claire protocol fees](token-actions.md#claire-protocol-fees).

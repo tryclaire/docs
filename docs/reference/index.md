@@ -31,3 +31,6 @@ Limits do not guarantee that an integration is currently connected or collected 
 - [Native MCP](mcp.md): Streamable HTTP setup and read-only tools.
 - [Security and data](security-and-data.md): access, public surfaces, private drafts and stored data.
 - [$CLAIRE holders and referrals](claire-holders.md): planned holder benefits, referral rewards and launch airdrops.
+- [Protocol contract reference](protocol-contracts.md): the five Claire contracts, their functions, events, errors, immutables and fee rules, and where ABIs and deployment addresses are published.
+- [Verify on-chain](verify-on-chain.md): check a launch, lock, revenue lock, router split or distribution round yourself, with or without the SDK, and the round manifest format.
+- [Docs for agents](agent-docs.md): the `llms.txt` page index and Markdown sources.
