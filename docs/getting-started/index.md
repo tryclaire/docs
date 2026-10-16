@@ -14,6 +14,8 @@ Your personal space and organization workspaces are separate. Personal navigatio
 
 Owners and admins can use the optional **Getting started** sidebar checklist. Hide or restore it for the selected organization in **Personal settings → Appearance**; the preference applies to your account in this browser.
 
+![The Finish setting up checklist on a workspace's Home page, grouped under Connect, Publish, Team and Optional, with a Connect Telegram shortcut.](../images/getting-started-checklist.webp)
+
 Claire uses a dark interface. Appearance offers preset or custom accent colours for this browser, not an account-wide theme or a change to your public site's appearance.
 
 ## Invite teammates

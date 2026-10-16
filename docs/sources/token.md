@@ -16,6 +16,8 @@ There are [three ways in](token-actions.md#three-ways-in-on-robinhood-chain): la
 
 **Token** brings together the market (a price or holders chart, recent trades and top holders) and, beside it, the token itself, its market figures and its creator fees. **Creator fees**, **Vesting** and **Snapshots** are its sub-pages. Provider observations and the holder index have their own timestamps. A page load is not proof that upstream data was just collected.
 
+![A linked pons v2 token's overview card: contract addresses, bonding-curve progress, supply split into circulating, locked by pons and on the curve, and a notice that the creator share destination changes on a set date.](../images/token-page.webp)
+
 pons v2 uses a bonding curve in its chosen quote (native ETH or an approved pair token) before graduation.
 
 ## pons v2 stages and market data
