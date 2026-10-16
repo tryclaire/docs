@@ -16,7 +16,24 @@ New pons v2 and Stockereum v3 launches, linking, and vesting require a [designat
 
 **Token** brings together the market (a price or holders chart, recent trades and top holders) and, beside it, the token itself, its market figures and its creator fees. **Creator fees**, **Vesting** and **Snapshots** are its sub-pages. Provider observations and the holder index have their own timestamps. A page load is not proof that upstream data was just collected.
 
-The launch protocols have different economics: pons v2 uses a native-ETH curve before graduation; Stockereum v3 uses permanent Uniswap V4 liquidity with an enabled quote, without a bonding curve or graduation stage. Stock-linked assets carry issuer, oracle, market, and securities-compliance risks.
+The launch protocols have different economics: pons v2 uses a bonding curve in its chosen quote (native ETH or an approved pair token) before graduation; Stockereum v3 uses permanent Uniswap V4 liquidity with an enabled quote, without a bonding curve or graduation stage. Stock-linked assets carry issuer, oracle, market, and securities-compliance risks.
+
+## pons v2 stages and market data
+
+A pons v2 token moves through stages, which the token card shows:
+
+| Stage | What it means |
+| --- | --- |
+| **Bonding curve** | Trading happens on the curve. The card shows the amount raised against the amount needed to graduate. The token graduates by itself when the curve sells out. |
+| **Sold out · graduating** | The curve is full. Buying and selling on the curve are closed while the token graduates, which is automatic and needs no action. |
+| **Graduated to Uniswap V4** | The token trades in a Uniswap v4 pool and its liquidity is locked in the pool permanently. |
+| **Rescued by pons** | pons returned the raise and no pool exists. |
+
+The supply is split into **Circulating**, **Locked by pons** (held by pons' locker, never a holder) and **On the curve**.
+
+Before graduation the market figures and chart come from the curve, read by its address; after graduation they come from the v4 pool, and candles and trades continue across the change. The pair row shows the curve address until a pool exists. Prices and market caps are in the pair's own units; USD is shown only when the market is priced in that exact quote, otherwise it is unavailable.
+
+Claire also re-reads who pons pays the token's creator fees to, on every load of the token page. If a token launched through Claire no longer pays its fee router, or pons has proposed a change, a warning appears; see [pons admin powers and fee-recipient monitoring](token-actions.md#pons-admin-powers-and-fee-recipient-monitoring).
 
 ## Work with holder snapshots
 
