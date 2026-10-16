@@ -10,6 +10,18 @@ In **Token**, the **signing wallet** button designates the organization's wallet
 > [!IMPORTANT]
 > Ethereum is coming soon; do not plan a launch, link or lock on it.
 
+## At a glance
+
+| Task | Where | Who |
+| --- | --- | --- |
+| Designate the signing wallet | **Token → signing wallet** | The organization owner signs a verification challenge |
+| [Launch a token](#launch-and-link-a-token) | **Token → Launch a token** | Owners and admins prepare it; the designated wallet signs |
+| [Bring a linked token to Claire](#bring-a-linked-token-to-claire) | **Bring this token to Claire** on the Token page | The creator's designated wallet, once |
+| [Change the split](#change-the-split-after-launch) | **Creator fees → Change the split** | The launcher only |
+| [Lock tokens](#fund-a-vesting-allocation) | **Vesting → New lock** | Owners and admins prepare it; the designated wallet signs |
+| [Publish a holder round](#payout-rounds) | **Creator fees → Publish holder round** | The designated wallet |
+| [Share proof](#claire-proof) | The public `/proof/<chainId>/<token>` page | Anyone, no sign-in |
+
 ## Three ways in on Robinhood Chain
 
 | | Launch through Claire | Link an existing pons token | Migrate a linked token to Claire |
@@ -35,17 +47,44 @@ Removing the designation or a member does not revoke wallet keys, on-chain right
 
 ## Launch and link a token
 
-1. Choose who receives the creator share in **Creator share** ([see below](#choose-who-is-paid)): **Me** (the designated wallet, the default), a **Vesting vault** or a **Split**. A vault or split is deployed first, from the designated wallet.
-2. Deploy your workspace's **Claire fee router** from the designated wallet. Set the starting project-holder share of trading revenue when you deploy it. You can later [raise the holder share and change the creator share's recipient](#change-the-split-after-launch); the holder share can never go down. Each router launches one token. A router that already exists is reused only when its recipient matches the draft.
-3. Enter launch details. Robinhood pons v2 offers every native option: the [launch config, the quote, a creator tax, opening snipe-tax exemptions](#pons-v2-launch-options) and the [buyback](#pons-buyback). Creator fees go to your fee router. Review the live factory settings and costs. An optional initial buy, where available, spends the pair token or wallet ETH; you can also [lock the opening buy](#lock-the-opening-buy).
-4. Approve the Claire launch fee to your fee router, and for a pons pair token also the exact initial buy. The router takes them in the launch transaction. If the designated wallet lacks the fee's stablecoin, Claire first offers **Buy with ETH**: one Uniswap swap that buys exactly the missing amount, capped at 1% above the quote, and refunds unused ETH in the same transaction.
-5. When the draft passes its checks, select **Launch** to walk through the signed transactions. Each one is prepared and shown for review first: the network, wallet, destination contract, calldata, ETH value, nonce, and costs. Preparing is not submission; submission is not confirmation.
-6. Follow each transaction in the signing wallet's **Transactions** until it is verified. If submission is uncertain, use **Check or recover** to refresh it from the chain or verify a transaction hash you know was sent. **Do not resend** an uncertain transaction or abandon it unless you know it was never sent. Confirmations reduce, but do not eliminate, reorganization risk.
-7. A verified launch is linked automatically only if the initiating user still has owner/admin access, the wallet designation is unchanged, and no different token is linked. A confirmed transaction can remain unassociated if those checks fail; read its status instead of launching again.
+1. **Choose the payee.** Choose who receives the creator share in **Creator share** ([see below](#choose-who-is-paid)): **Me** (the designated wallet, the default), a **Vesting vault** or a **Split**. A vault or split is deployed first, from the designated wallet.
+2. **Deploy the fee router.** Deploy your workspace's **Claire fee router** from the designated wallet. Set the starting project-holder share of trading revenue when you deploy it. You can later [raise the holder share and change the creator share's recipient](#change-the-split-after-launch); the holder share can never go down. Each router launches one token. A router that already exists is reused only when its recipient matches the draft.
+3. **Enter launch details.** Robinhood pons v2 offers every native option: the [launch config, the quote, a creator tax, opening snipe-tax exemptions](#pons-v2-launch-options) and the [buyback](#pons-buyback). Creator fees go to your fee router. Review the live factory settings and costs. An optional initial buy, where available, spends the pair token or wallet ETH; you can also [lock the opening buy](#lock-the-opening-buy).
+4. **Approve the fees.** Approve the Claire launch fee to your fee router, and for a pons pair token also the exact initial buy. The router takes them in the launch transaction. If the designated wallet lacks the fee's stablecoin, Claire first offers **Buy with ETH**: one Uniswap swap that buys exactly the missing amount, capped at 1% above the quote, and refunds unused ETH in the same transaction.
+5. **Launch.** When the draft passes its checks, select **Launch** to walk through the signed transactions. Each one is prepared and shown for review first: the network, wallet, destination contract, calldata, ETH value, nonce, and costs. Preparing is not submission; submission is not confirmation.
+6. **Follow each transaction.** Follow each transaction in the signing wallet's **Transactions** until it is verified. If submission is uncertain, use **Check or recover** to refresh it from the chain or verify a transaction hash you know was sent.
+7. **Check the link.** A verified launch is linked automatically only if the initiating user still has owner/admin access, the wallet designation is unchanged, and no different token is linked. A confirmed transaction can remain unassociated if those checks fail; read its status instead of launching again.
+
+> [!WARNING]
+> **Do not resend** an uncertain transaction or abandon it unless you know it was never sent. Confirmations reduce, but do not eliminate, reorganization risk.
 
 To link an existing pons token, use **Link your token** on the Token page or **Settings → Connections**, enter its contract address and select Robinhood Chain. Claire verifies the chain, factory, and designated wallet requirements. One workspace has one active linked token; resolve its existing link before starting a different launch.
 
 Stock-linked assets, which Ethereum (coming soon) will use, involve issuer, oracle, market and securities-compliance risks. See the [Token guide](token.md) before interpreting market or creator-fee figures.
+
+### The launch form
+
+The launch form is one page, saved for your team as you type. Nothing is signed there; the Token page tells you whether the draft is ready to launch. **Edit draft** goes back to any field, and **Discard draft** clears every field for your whole team without changing anything on-chain.
+
+Choose the network, name the token and add optional links:
+
+![Sections 1 to 3 of the launch form: the pons network selected with Stockereum marked Coming soon, name, symbol, description and logo fields, and optional X, Telegram, website, Discord and Farcaster links.](../images/launch-form-basics.webp)
+
+**Economics** sets the quote asset and the creator tax, and shows the bonding curve:
+
+![Section 4 of the launch form: the quote asset picker with ETH and tokenised-stock pair tokens, the creator tax slider at 0%, and the bonding curve summary.](../images/launch-form-economics.webp)
+
+The same section sets the holder share, which can only go up later. The optional initial buy, its slippage and the opening snipe-tax exemptions follow it; see [pons v2 launch options](#pons-v2-launch-options).
+
+![The holder share slider at 50% with its 90% maximum.](../images/launch-form-holder-share.webp)
+
+**Creator share** picks the [payee](#choose-who-is-paid):
+
+![Section 5 of the launch form: the Me, Vesting vault and Split selector, with Me as the default.](../images/launch-form-creator-share.webp)
+
+The preview beside the form shows the fee arithmetic per USD 100 traded and what you pay before you sign. It is arithmetic, not a forecast.
+
+![The launch preview for a 50% holder share: trading revenue per 100 traded split between holders, the creator and Claire, then the Claire launch fee, the pons launch fee and network gas.](../images/launch-preview.webp)
 
 ### Choose who is paid
 
@@ -61,8 +100,21 @@ A vault or split has no owner, admin, upgrade, cancel or transfer, and Claire's 
 
 Every Claire fee router lets its launcher (the router's `creator`, the designated wallet that launched or migrated the token) change two things after launch, from the **Change the split** card on **Creator fees** ("Holder share only goes up · destination changes need 7 days' notice"). Nobody else can start either change, and the rest of the split is fixed: Claire's 10% stays, and nobody can take the token out of Claire, because the router never moves the launchpad's creator-fee recipient.
 
+![The Change the split card on Creator fees, with the New holder share field, a pending creator share destination change with Cancel change and Apply change, and the Me, Vesting vault and Split selector.](../images/change-the-split.webp)
+
+| | Raise the holder share | Change the creator share destination |
+| --- | --- | --- |
+| Who starts it | The launcher only | The launcher only |
+| When it takes effect | At once | After a 7-day public notice |
+| Limits | Up to 90%; it can never be lowered | **Me**, a **Vesting vault** or a **Split** |
+| Undo | Not possible | **Cancel change**, any time before it takes effect |
+| Applies to | Fees collected after the change | Fees collected after the change is applied |
+
 - **Raise the holder share.** Enter the **New holder share (%)** (up to 90%) and select **Raise holder share**, then sign. It takes effect at once. The holder share can only go up: it can never be lowered, so holders can rely on the share they see. Fees the router has earned so far are distributed under the old share first, so the new share applies only to fees collected after the change. You can start from 0%: every router has a holder distributor from the start.
 - **Change the creator share destination.** Under **Creator share goes to**, choose **Me**, **Vesting vault** or **Split** (a [vault or split](#choose-who-is-paid) is deployed first with **1. Deploy vesting vault** or **1. Deploy split**), then select **Change creator share destination** and sign. The change is public from that moment and takes effect only after a **7-day notice**. Until then the current recipient keeps being paid. While a change is pending the button reads **Replace the proposed change**, which restarts the 7 days. **Cancel change** withdraws it at any time before it takes effect. When the notice has passed, anyone can select **Apply change**, and the first distribution after it goes to the new recipient. Anything the old recipient was already owed stays theirs.
+
+> [!WARNING]
+> The holder share can only go up. A destination change is public from the moment you sign it, and **Replace the proposed change** restarts the 7-day notice.
 
 The notice is shown publicly, as "Creator share destination changes to {address, a vesting vault or a split} on {date}":
 
@@ -91,11 +143,14 @@ The launch review repeats the launch config, the graduation threshold and both m
 
 ### pons admin powers and fee-recipient monitoring
 
-The Claire contracts cannot remove powers pons keeps for itself. pons' administration is a 2-of-3 Safe. Among its powers, pons can propose a different creator-fee recipient for a launch; the change is public and executes only after a 3-day timelock, and the Claire router cannot block it. A new recipient would bypass the router's split. pons also runs a fee-sweep operator, can disable a launch's buyback, and its fee escrow accepts credits from anyone.
+> [!WARNING]
+> The Claire contracts cannot remove powers pons keeps for itself. pons' administration is a 2-of-3 Safe. Among its powers, pons can propose a different creator-fee recipient for a launch; the change is public and executes only after a 3-day timelock, and the Claire router cannot block it. A new recipient would bypass the router's split. pons also runs a fee-sweep operator, can disable a launch's buyback, and its fee escrow accepts credits from anyone.
 
 Claire re-reads the token's creator-fee recipient on every load of the token page. If pons now pays the token's creator fees to something other than its Claire fee router, or has proposed a change, the Token page and **Creator fees** show a warning: **This token's creator fees no longer go to its fee router**, or **pons has proposed moving this token's creator fees**, with the new recipient and the effective and expiry times in UTC. Check it before relying on the split.
 
 ### pons buyback
+
+![The Buyback switch on the launch form, off by default, with its explanation.](../images/launch-form-buyback.webp)
 
 On pons, **Buyback** is off by default and is a switch at launch; the creator wallet can also turn it on or off later from **Creator fees**. When it is on:
 
@@ -107,6 +162,14 @@ On pons, **Buyback** is off by default and is a switch at launch; the creator wa
 ## Bring a linked token to Claire
 
 Migration brings a pons token you linked into Claire without relaunching it. Afterwards it counts as launched through Claire. The public Proof page reads **Launched through Claire** and the token gets everything a Claire launch has, except launch-only items such as the locked opening buy: free locks, revenue and price locks, [airdrops to $CLAIRE holders](../reference/claire-holders.md), holder rounds, the buyback through the router, and a creator share paid to you, a vault or a split.
+
+| Migration at a glance | |
+| --- | --- |
+| Fee | USD 25 once, in the chain's fee stablecoin (USDG on Robinhood Chain), charged only if the adoption succeeds |
+| From then on | Claire takes 10% of everything the fee router receives |
+| Stays yours | Fees the token earned before migration |
+| Who can migrate | The creator's designated wallet, once, on Robinhood Chain |
+| Where to start | **Bring this token to Claire** on the Token page, the **Creator fees** payout card or the token's public Proof page |
 
 **What it costs.** A one-time **USD 25** migration fee in the chain's fee stablecoin (USDG on Robinhood Chain), split evenly between the Claire treasury and $CLAIRE holders and paid in the same transaction as the adoption. If the adoption reverts, nothing is charged. From migration onward Claire takes **10%** of everything the fee router receives, the same as for a launch (see [Claire protocol fees](#claire-protocol-fees)).
 
@@ -136,6 +199,9 @@ Owners and admins see **Bring this token to Claire** on a linked pons token that
 8. **Move the pons fee recipient** to the router (`transferCreatorFeeRecipient`). It takes effect immediately.
 9. **Adopt.** The router pays the fee, registers the token and emits `Adopted`.
 
+> [!WARNING]
+> Step 8 takes effect immediately. The router has no function that sends the creator-fee recipient elsewhere, so only pons' own administration can change it afterwards, through a public 3-day timelock. Review [pons admin powers](#pons-admin-powers-and-fee-recipient-monitoring) first.
+
 When it settles, the token's Claire features switch on and the public Proof page reads **Launched via Claire: Migrated {date}**. Anyone can [verify it](../reference/verify-on-chain.md#verify-a-launch): the launch path is `migrated`.
 
 If the recipient moved but the adoption did not happen, reopen the dialog: it resumes at **Finish migration**, derived from the chain. Do not resend an uncertain transaction; use **Check or recover** as for a launch.
@@ -147,6 +213,18 @@ Vesting requires a linked supported pons v2 token. In **Vesting**, **New lock** 
 - **Timelock:** the full amount becomes claimable at the end.
 - **Linear:** tokens become claimable progressively between start and end.
 - **Catch-up cliff:** nothing is claimable before the cliff; the fraction accrued since the start unlocks at the cliff, then vesting continues linearly.
+
+![The Vesting page for a token with no locks yet: the three steps (approve the exact total, fund the lock, beneficiaries claim) and a New lock button.](../images/vesting-overview.webp)
+
+The dialog's first step takes the beneficiaries and amounts; the second sets when the tokens unlock:
+
+![The New lock dialog at step 2, When it unlocks, with Dates, Revenue milestones and Price targets, the Timelock, Linear and Cliff plus linear schedules, and start and end fields in UTC.](../images/new-lock-dialog.webp)
+
+| Unlock by | Available for | Claire fee | Cancel and transfer |
+| --- | --- | --- | --- |
+| **Dates** | A linked supported pons v2 token | Free apart from gas for a token launched through Claire or migrated to it; USD 25 per funding transaction otherwise | Noncancelable and nontransferable by default; you can turn either on at creation |
+| [**Revenue milestones**](#revenue-locks) | A token launched through Claire whose fee router is set up | None | Never |
+| [**Price targets**](#price-target-locks) | A token launched through Claire | None | Never |
 
 A lock is **noncancelable and nontransferable** by default. You can turn on cancellation or beneficiary transfer at creation, before funding. Under **Cancelable** you can add a **Notice period (days)**: the funder must first select **Request cancel**, which starts a public countdown, and can select **Cancel** only after it ends (with no notice, **Cancel lock** works at once). The beneficiary keeps vesting and can claim during the notice, and the refund is computed when the cancellation executes. Verify the beneficiaries, amounts, and dates carefully before funding.
 
@@ -177,6 +255,8 @@ Every token launch through Claire goes through the workspace's own **fee router*
 - **Project holders** receive the share you set when you deploy the router, up to 90%. After that the launcher can only raise it, never lower it, and a raise applies to fees collected after it.
 - **The payee** receives the rest, including rounding remainders: the launcher, a vesting vault or a split, as chosen at launch or changed since with 7 days' public notice.
 
+![The Where trading revenue goes card on Creator fees: per 100 of trading revenue, 60 to project holders, 30 to the creator, 5 to $CLAIRE holders and 5 to the Claire treasury.](../images/revenue-split.webp)
+
 | Per 100 units of trading revenue | Claire treasury | $CLAIRE holders | Payee (creator share) | Project holders |
 | --- | --- | --- | --- | --- |
 | Holder sharing off | 5 | 5 | 90 | 0 |
@@ -184,11 +264,13 @@ Every token launch through Claire goes through the workspace's own **fee router*
 
 **Service fees** are fixed amounts of one USD stablecoin per chain (USDG on Robinhood Chain), with no price oracle, so a depeg changes their real value but not the amount charged. You can pay them with ETH through the swap step above. Each fee is split evenly between the Claire treasury and $CLAIRE holders, and is separate from gas and launchpad fees:
 
-- **Launch:** USD 10, taken by the router in the launch transaction and charged only if the launch succeeds.
-- **Migrating a linked token to Claire:** USD 25, once, paid at adoption. See [Bring a linked token to Claire](#bring-a-linked-token-to-claire).
-- **Locking a linked token that has not migrated:** USD 25 per funding transaction, however many beneficiaries. It is never a share of the locked tokens.
-- **Locking a token launched through Claire or migrated to it:** free apart from gas. Eligibility comes from an on-chain registry that only Claire fee routers can write, for tokens they launched or adopted themselves. Importing or naming a token does not make it eligible.
-- **Claims, unlocks, cancellations and transfers:** no Claire fee; gas still applies.
+| Service | Claire fee |
+| --- | --- |
+| **Launch** | USD 10, taken by the router in the launch transaction and charged only if the launch succeeds. |
+| **Migrating a linked token to Claire** | USD 25, once, paid at adoption. See [Bring a linked token to Claire](#bring-a-linked-token-to-claire). |
+| **Locking a linked token that has not migrated** | USD 25 per funding transaction, however many beneficiaries. It is never a share of the locked tokens. |
+| **Locking a token launched through Claire or migrated to it** | Free apart from gas. Eligibility comes from an on-chain registry that only Claire fee routers can write, for tokens they launched or adopted themselves. Importing or naming a token does not make it eligible. |
+| **Claims, unlocks, cancellations and transfers** | No Claire fee; gas still applies. |
 
 Before you sign, Claire shows the exact payment token and amount, the launchpad's own fees and a gas estimate.
 
@@ -217,6 +299,8 @@ The lock is **never cancelable** by anyone, because the router that funds it has
 A **revenue lock** holds tokens of a token launched through Claire and releases them in tranches as that token's own trading revenue grows, instead of by date alone. Like every Claire lock, it needs the [protocol](#claire-protocol-fees) to be deployed.
 
 In **Vesting → New lock**, **Unlock by** offers **Dates** or **Revenue milestones**. Revenue milestones appear only for a token launched through Claire whose fee router is set up. Choosing them replaces the schedule step, and the Options step is skipped because the lock is always noncancelable and nontransferable.
+
+![The New lock dialog with Revenue milestones selected: a milestone of new revenue in ETH with its Unlocks percentage, an Add milestone button, a mandatory fallback date in UTC and the revenue the router has collected so far.](../images/new-lock-revenue.webp)
 
 - **Milestones:** 1 to 10 rows, each a threshold of new router revenue, entered in the quote asset's own units, and an **Unlocks %** share. Thresholds strictly increase and the shares must add up to 100%. The dialog also shows the router's revenue so far.
 - **Baseline:** thresholds are measured from the router's cumulative revenue at the moment the lock is created, so revenue earned earlier never counts.
@@ -262,12 +346,18 @@ Project-holder distributions, $CLAIRE holder distributions, airdrops and referra
 
 Holders claim at `/distributions/<chainId>/<distributor>`; the claim page shows each asset's rounds, what is promised in total and claimed, and what each connected wallet is owed.
 
+The **Holder rounds** card on **Creator fees** shows what is not yet distributed and is where the designated wallet publishes a round.
+
+![The Holder rounds card on Creator fees: the amount not yet distributed, a Publish holder round button and a link to the holder claim page.](../images/holder-rounds.webp)
+
 ## Claire Proof
 
 Every supported token has a public **Claire Proof** page at `/proof/<chainId>/<token>`. It needs no sign-in, and it resolves for any ERC-20 on a supported network, not only tokens launched through Claire. Its open-graph image and the badge below use the same data.
 
 > [!NOTE]
 > **Evidence, not endorsement.** The page states what the chain and Claire's records show. It says nothing about the token's value, the project's intentions or what happens next, and it is not an audit or a liquidity-lock guarantee.
+
+![The top of a Claire Proof page for a migrated token: the share of supply held in Claire locks and the Launch card listing the router, launchpad, creator share recipient, holder share, a pending creator share change, buyback state and fee recipient.](../images/proof-page.webp)
 
 **What it shows.** The header names the token and network and reads **Launched through Claire** or **Not launched through Claire**. Then:
 
@@ -278,7 +368,11 @@ Every supported token has a public **Claire Proof** page at `/proof/<chainId>/<t
 - **Verified connections:** the X account, Telegram chat and domain the project connected inside Claire. These are made in Claire, are not on-chain facts and do not show who controls the token.
 - **Verify it yourself:** a copyable `@tryclaire/sdk/protocol` snippet that reads the same facts from the chain, and a link to [Verify on-chain](../reference/verify-on-chain.md). Take contract addresses from the SDK's `deployments` map, never from the page.
 
+![The Locked supply card of a Claire Proof page: time, revenue and price lock amounts, whether the opening buy was locked, and the supply held by the pons locker.](../images/proof-locked-supply.webp)
+
 For a token that is not registered by a Claire router factory the page states nothing about its launch, fee routing or revenue, and shows only its Claire locks. If the chain cannot be read, the page says so instead of showing figures.
+
+![The four rows of the Claire Proof badge: Launched via Claire, Locked by Claire locks, Creator share and Revenue routed.](../images/proof-badge.webp)
 
 **Badge and sharing.** `/proof/<chainId>/<token>/badge.svg` is a small static dark badge (320 px wide, no script or fonts) showing **Launched via Claire** (Yes or No), **Locked by Claire locks** (a percentage) and, for Claire-launched tokens, **Revenue routed**. It is cached for about five minutes. The proof page's **Share this proof** card shows it with copy buttons for these snippets (shown with a placeholder URL):
 
