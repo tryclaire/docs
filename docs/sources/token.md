@@ -5,18 +5,18 @@ order: 6
 
 # Token
 
-Token tools are optional. Select the network and enter the contract address of a supported pons token on Robinhood Chain or Stockereum v3 token on Ethereum. Claire verifies the selected chain and supported launch factory. Your workspace has one active linked token at a time.
+Token tools are optional. Enter the contract address of a supported pons token on Robinhood Chain. Claire verifies the chain and supported launch factory. Your workspace has one active linked token at a time. Ethereum (Stockereum) is coming soon and cannot be selected.
 
-New pons v2 and Stockereum v3 launches, linking, and vesting require a [designated signing wallet](token-actions.md). New launches and new vesting locks also require the Claire protocol, which is not deployed yet. Retained supported pons launches remain readable.
+There are [three ways in](token-actions.md#three-ways-in-on-robinhood-chain): launch a new token through Claire, link an existing pons token (workspace only, nothing on-chain), or [bring a linked token to Claire](token-actions.md#bring-a-linked-token-to-claire). Launches and vesting require a [designated signing wallet](token-actions.md).
 
-> [!IMPORTANT]
-> Ethereum/Stockereum availability is rollout-gated. Confirm that Ethereum actions are available for your workspace before funding a wallet or promising a launch.
+> [!NOTE]
+> Ethereum is coming soon. Do not plan a launch, link or lock on it.
 
 ## Inspect observations
 
 **Token** brings together the market (a price or holders chart, recent trades and top holders) and, beside it, the token itself, its market figures and its creator fees. **Creator fees**, **Vesting** and **Snapshots** are its sub-pages. Provider observations and the holder index have their own timestamps. A page load is not proof that upstream data was just collected.
 
-The launch protocols have different economics: pons v2 uses a bonding curve in its chosen quote (native ETH or an approved pair token) before graduation; Stockereum v3 uses permanent Uniswap V4 liquidity with an enabled quote, without a bonding curve or graduation stage. Stock-linked assets carry issuer, oracle, market, and securities-compliance risks.
+pons v2 uses a bonding curve in its chosen quote (native ETH or an approved pair token) before graduation.
 
 ## pons v2 stages and market data
 
@@ -48,7 +48,7 @@ Snapshots use indexed transfer history. They are unavailable while the index is 
 
 ## Read creator fee figures
 
-Where provided for pons, creator fee figures come from the launch contracts. Claire estimates the claimable amount with a read-only on-chain call and never sends a creator-fee claim transaction. Stockereum fee and reward routing differs; do not interpret a pons creator-fee estimate as a Stockereum balance. See [current limits](../reference/index.md) for additional bounds.
+Where provided for pons, creator fee figures come from the launch contracts. Claire estimates the claimable amount with a read-only on-chain call and never sends a creator-fee claim transaction. See [current limits](../reference/index.md) for additional bounds.
 
 This read-only **creator-fee** display is separate from [wallet-signed launches, approvals, vesting funding, and beneficiary payout claims](token-actions.md). Claire does not custody funds or sign those transactions for you.
 

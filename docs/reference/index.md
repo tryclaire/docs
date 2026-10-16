@@ -31,6 +31,6 @@ Limits do not guarantee that an integration is currently connected or collected 
 - [Native MCP](mcp.md): Streamable HTTP setup and read-only tools.
 - [Security and data](security-and-data.md): access, public surfaces, private drafts and stored data.
 - [$CLAIRE holders and referrals](claire-holders.md): $CLAIRE on Robinhood Chain, holder fee rounds, benefits, referral rewards and launch airdrops with expiry.
-- [Protocol contract reference](protocol-contracts.md): the eleven Claire contracts, their functions, events, errors, immutables and fee rules, and where ABIs and deployment addresses are published.
+- [Protocol contract reference](protocol-contracts.md): the twelve Claire contracts, their functions, events, errors, immutables and fee rules, and where ABIs and deployment addresses are published.
 - [Verify on-chain](verify-on-chain.md): check a launch, payee, lock, revenue lock, price lock, router split or distribution round yourself, with or without the SDK, and the round manifest format.
 - [Docs for agents](agent-docs.md): the `llms.txt` page index and Markdown sources.
