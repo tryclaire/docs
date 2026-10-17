@@ -21,12 +21,12 @@ External URLs are not fetched, so provider outages cannot block a documentation 
 Review external links and the rendered page when changing them.
 
 Keep existing paths stable. Use relative Markdown links, such as `../sources/telegram.md`.
-Pages use `title` and `order` front matter; `index.md` is a section's landing page.
+Pages use `title`, `description`, `icon` and `order` front matter; `index.md` is a section's landing page and may add `tab` to place the section under a top tab. Docs can use cards, steps, tabs and collapsible sections; see the [rich content guide](docs/publishing/rich-content/index.md).
 Use ordinary Markdown rather than executable MDX components. Repository housekeeping belongs
 outside `docs/` so it is not published as a product page.
 
 Screenshots live in `docs/images/` and are linked with relative Markdown image syntax, such as
-`![Alt text](../images/token-page.webp)`; raw HTML `<img>` tags are not resolved. Claire serves
+`![Alt text](../images/token-page.webp)` (one more `../` from a page in a subfolder); raw HTML `<img>` tags are not resolved. Claire serves
 them from this public repository's `main` branch, so an image appears once its change is merged.
 Use PNG or WebP under 250 KB, crop to the relevant component, and write descriptive alt text.
 Public screenshots must not show test funds, local-fork labels, chain ids of test networks,
