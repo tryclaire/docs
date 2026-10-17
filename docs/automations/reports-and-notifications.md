@@ -1,6 +1,8 @@
 ---
 title: Notifications
-order: 10
+description: Choose how workspace updates reach you by email, Telegram and in the app.
+icon: bell
+order: 28
 ---
 
 # Notifications

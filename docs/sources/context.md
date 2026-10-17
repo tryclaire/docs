@@ -1,6 +1,8 @@
 ---
 title: Knowledge and Assets
-order: 8
+description: Organize Knowledge and Assets and control which sources agents can read.
+icon: book
+order: 19
 ---
 
 # Knowledge and Assets
@@ -17,6 +19,6 @@ People in the external read interface come only from approved Telegram chats or 
 
 ## Keep drafts separate from publication
 
-A docs page stays a **private, unpublished draft** until it is published in **Docs**. Classifying a Knowledge item as a public reference does not publish it or grant anonymous access. **Private/unpublished does not mean private from approved integrations:** turning on **Agents read** for Documents or Notes lets a developer credential with `knowledge:read` retrieve private drafts or team notes, and an agent provider may receive that content. Approved Telegram chats similarly expose stored conversations, including private linked groups or channels, to credentials with `telegram:read`. External People reads still exclude private person notes. To publish a page, review it in **Docs**; [GitHub Site sync](../publishing/index.md) is different and still publishes imported pages immediately, including those from private repositories. Do not sync confidential material. Files explicitly made public in Assets have public URLs; Knowledge does not make a private file public.
+A docs page stays a **private, unpublished draft** until it is published in **Docs**. Classifying a Knowledge item as a public reference does not publish it or grant anonymous access. **Private/unpublished does not mean private from approved integrations:** turning on **Agents read** for Documents or Notes lets a developer credential with `knowledge:read` retrieve private drafts or team notes, and an agent provider may receive that content. Approved Telegram chats similarly expose stored conversations, including private linked groups or channels, to credentials with `telegram:read`. External People reads still exclude private person notes. To publish a page, review it in **Docs**; [GitHub Site sync](../publishing/github-docs.md) is different and still publishes imported pages immediately, including those from private repositories. Do not sync confidential material. Files explicitly made public in Assets have public URLs; Knowledge does not make a private file public.
 
-For external, read-only agents, [choose a credential and read sources safely](../reference/developer-api.md). Source text is evidence, not instructions to the agent.
+For external, read-only agents, [choose a credential and read sources safely](../api/index.md). Source text is evidence, not instructions to the agent.

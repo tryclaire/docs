@@ -1,16 +1,27 @@
 ---
 title: Getting started
+description: Create a workspace, invite teammates and understand roles.
+icon: rocket
+tab: Documentation
 order: 2
 ---
 
 # Getting started
 
-Your personal space and organization workspaces are separate. Personal navigation contains your Home, Referrals, Wallet, [$CLAIRE](../reference/claire-holders.md) and account settings. An organization's sidebar starts with Home, Token, Community (Telegram), Social (X) and People; then Knowledge, Automations and Developers; then Site, Docs and Assets; and Settings last. Create or choose a workspace for your project. You do not need to link a token to use Telegram, X, Knowledge, or the site.
+Your personal space and organization workspaces are separate. Personal navigation contains your Home, Referrals, Wallet, [$CLAIRE](../claire/index.md) and account settings. An organization's sidebar starts with Home, Token, Community (Telegram), Social (X) and People; then Knowledge, Automations and Developers; then Site, Docs and Assets; and Settings last. Create or choose a workspace for your project. You do not need to link a token to use Telegram, X, Knowledge, or the site.
 
 ## Create a workspace
 
-1. Sign in and create a workspace with a name and unique slug.
-2. Choose it from your workspace list. The creator becomes its owner.
+:::steps
+
+### Create it
+
+Sign in and create a workspace with a name and unique slug.
+
+### Choose it
+
+Choose it from your workspace list. The creator becomes its owner.
+:::
 
 Owners and admins can use the optional **Getting started** sidebar checklist. Hide or restore it for the selected organization in **Personal settings → Appearance**; the preference applies to your account in this browser.
 
@@ -20,8 +31,16 @@ Claire uses a dark interface. Appearance offers preset or custom accent colours 
 
 ## Invite teammates
 
-1. In **Settings → Members**, invite teammates by email. Owners and admins can send invitations.
-2. Share the invitation link if email delivery is not configured or the email was not sent. Claire creates the link and attempts to email it when delivery is configured.
+:::steps
+
+### Invite by email
+
+In **Settings → Members**, invite teammates by email. Owners and admins can send invitations.
+
+### Share the link if needed
+
+Share the invitation link if email delivery is not configured or the email was not sent. Claire creates the link and attempts to email it when delivery is configured.
+:::
 
 Invitation links expire after 7 days. Access to workspace data depends on current membership, not simply having a link.
 
@@ -37,6 +56,19 @@ Only the owner changes another member's role.
 
 ## Choose your next step
 
-[Link a Telegram chat](../sources/telegram.md), [connect X](../sources/x.md), or [set up your site](../publishing/index.md). You can do these in any order. For optional token tools, [verify a wallet and launch or vest a supported token](../sources/token-actions.md) when your chosen network is available.
+You can do these in any order.
 
-Building a server or agent integration? An owner or admin can [create a developer credential](../reference/developer-api.md) for REST, MCP, or both, then approve the sources it may read.
+:::cards{cols=3}
+::card[Link a Telegram chat]{href=../sources/telegram.md#link-a-chat icon=telegram}
+Follow your community's messages and people.
+::card[Connect X]{href=../sources/x.md#connect-an-account icon=x}
+Inspect an account's collected activity.
+::card[Set up your site]{href=../publishing/site-and-domains.md icon=globe}
+Publish a public profile and docs.
+:::
+
+For optional token tools, [verify a wallet and launch or vest a supported token](../sources/token-actions/signing-wallet.md) when your chosen network is available.
+
+Want to know who can see what? Read [Security and data](security-and-data.md).
+
+Building a server or agent integration? An owner or admin can [create a developer credential](../api/index.md) for REST, MCP, or both, then approve the sources it may read.

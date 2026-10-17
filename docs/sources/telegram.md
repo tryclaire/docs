@@ -1,6 +1,8 @@
 ---
 title: Telegram
-order: 4
+description: Link a group or channel to follow its messages, people and activity, with an optional join portal.
+icon: telegram
+order: 5
 ---
 
 # Telegram
