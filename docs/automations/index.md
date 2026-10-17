@@ -1,6 +1,9 @@
 ---
 title: Automations
-order: 9
+description: Telegram rules that run on a source event or a weekly schedule.
+icon: bolt
+tab: Documentation
+order: 27
 ---
 
 # Automations
@@ -24,8 +27,16 @@ A rule can post plain text, post and pin a new message, or pin an existing messa
 
 ## Enable a rule
 
-1. Choose the trigger and Telegram action, then save the rule.
-2. Enable it explicitly. A disabled rule takes no live actions.
+:::steps
+
+### Save the rule
+
+Choose the trigger and Telegram action, then save the rule.
+
+### Enable it
+
+Enable it explicitly. A disabled rule takes no live actions.
+:::
 
 At delivery, Claire rechecks the rule, approving manager's role, connected account where applicable, and physical chat identity. Changing a rule or destination can stop pending work. Old events are not delivered late.
 
@@ -41,4 +52,4 @@ At delivery, Claire rechecks the rule, approving manager's role, connected accou
 > [!IMPORTANT]
 > Unknown is never retried automatically. Check the chat before taking another action.
 
-A completed post is not posted again just because pinning it failed. Live delivery has an organization-wide hourly cap; see [current limits](../reference/index.md). See also [notifications](reports-and-notifications.md).
+A completed post is not posted again just because pinning it failed. Live delivery has an organization-wide hourly cap; see [current limits](../reference/limits.md). See also [notifications](reports-and-notifications.md).

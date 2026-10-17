@@ -1,6 +1,8 @@
 ---
 title: X
-order: 5
+description: Connect an X account to inspect its collected activity, read-only.
+icon: x
+order: 6
 ---
 
 # X

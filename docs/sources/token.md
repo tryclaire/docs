@@ -1,13 +1,15 @@
 ---
 title: Token
-order: 6
+description: Link a pons token on Robinhood Chain and inspect its market, holders, snapshots and creator fees.
+icon: coin
+order: 7
 ---
 
 # Token
 
 Token tools are optional. Enter the contract address of a supported pons token on Robinhood Chain. Claire verifies the chain and supported launch factory. Your workspace has one active linked token at a time. Ethereum (Stockereum) is coming soon and cannot be selected.
 
-There are [three ways in](token-actions.md#three-ways-in-on-robinhood-chain): launch a new token through Claire, link an existing pons token (workspace only, nothing on-chain), or [bring a linked token to Claire](token-actions.md#bring-a-linked-token-to-claire). Launches and vesting require a [designated signing wallet](token-actions.md).
+There are [three ways in](token-actions/index.md#three-ways-in-on-robinhood-chain): launch a new token through Claire, link an existing pons token (workspace only, nothing on-chain), or [bring a linked token to Claire](token-actions/linking-and-migration.md#bring-a-linked-token-to-claire). Launches and vesting require a [designated signing wallet](token-actions/signing-wallet.md).
 
 > [!NOTE]
 > Ethereum is coming soon. Do not plan a launch, link or lock on it.
@@ -35,7 +37,7 @@ The supply is split into **Circulating**, **Locked by pons** (held by pons' lock
 
 Before graduation the market figures and chart come from the curve, read by its address; after graduation they come from the v4 pool, and candles and trades continue across the change. The pair row shows the curve address until a pool exists. Prices and market caps are in the pair's own units; USD is shown only when the market is priced in that exact quote, otherwise it is unavailable.
 
-Claire also re-reads who pons pays the token's creator fees to, on every load of the token page. If a token launched through Claire no longer pays its fee router, or pons has proposed a change, a warning appears; see [pons admin powers and fee-recipient monitoring](token-actions.md#pons-admin-powers-and-fee-recipient-monitoring).
+Claire also re-reads who pons pays the token's creator fees to, on every load of the token page. If a token launched through Claire no longer pays its fee router, or pons has proposed a change, a warning appears; see [pons admin powers and fee-recipient monitoring](token-actions/pons-admin-powers.md).
 
 ## Work with holder snapshots
 
@@ -50,8 +52,8 @@ Snapshots use indexed transfer history. They are unavailable while the index is 
 
 ## Read creator fee figures
 
-Where provided for pons, creator fee figures come from the launch contracts. Claire estimates the claimable amount with a read-only on-chain call and never sends a creator-fee claim transaction. See [current limits](../reference/index.md) for additional bounds.
+Where provided for pons, creator fee figures come from the launch contracts. Claire estimates the claimable amount with a read-only on-chain call and never sends a creator-fee claim transaction. See [current limits](../reference/limits.md) for additional bounds.
 
-This read-only **creator-fee** display is separate from [wallet-signed launches, approvals, vesting funding, and beneficiary payout claims](token-actions.md). Claire does not custody funds or sign those transactions for you.
+This read-only **creator-fee** display is separate from [wallet-signed launches, approvals, vesting funding, and beneficiary payout claims](token-actions/index.md). Claire does not custody funds or sign those transactions for you.
 
-Launches through the Claire protocol route creator fees through a fee router instead, and the **Creator fees** page then shows the router's total revenue. See [Claire protocol fees](token-actions.md#claire-protocol-fees).
+Launches through the Claire protocol route creator fees through a fee router instead, and the **Creator fees** page then shows the router's total revenue. See [Claire protocol fees](token-actions/fees.md).
