@@ -1,36 +1,33 @@
 ---
-title: Reference and limits
-order: 11
+title: Developer overview
+description: Everything for building on Claire, plus the current limits and data freshness.
+icon: compass
+tab: Developers
+order: 33
 ---
 
-# Reference and limits
+# Developer overview
 
-These are current application guards and early-access limits, not proposed pricing. Early access applies to every workspace today; the top plan raises some limits (see [$CLAIRE holders and referrals](claire-holders.md)). A provider can impose separate limits.
+Read a workspace's approved sources over REST or MCP, verify the Claire protocol on-chain, and point agents at these docs.
 
-## Current limits
+## Explore the developer docs
 
-| Feature | Current application limit |
-| --- | --- |
-| Workspace creation | 5 requests per account per day. |
-| Invitations | 20 requests per workspace per hour; invitation links expire in 7 days. |
-| Assets | 2 GiB of workspace storage (10 GiB on the top plan); 50 MiB per file; 60 upload requests per workspace per hour. |
-| Image upload | 5 MiB per image. |
-| GitHub docs import | Up to 300 Markdown files from the selected folder per sync. |
-| Automations | 10 unarchived rules per workspace (25 on the top plan); up to 30 Telegram action attempts per workspace per hour. |
-| X automation collection | 100,000 search credits per connected X account per UTC month. |
-| Holder snapshot export | Up to 10,000 holder rows in the full response; `truncated` signals more matches. |
-| Developer API | 120 requests per minute per key and 600 per minute per workspace (360 and 1,800 on the top plan), and 300 per minute per IP. `RateLimit-Limit` reports the limit that applies. |
+:::cards{cols=3}
+::card[REST API]{href=../api/index.md icon=code}
+Scoped keys, source sharing and read-only endpoints.
+::card[SDK]{href=../sdk/index.md icon=layers}
+A zero-dependency client and the protocol subpath.
+::card[Native MCP]{href=../mcp/index.md icon=plug}
+Streamable HTTP tools for MCP clients.
+::card[Protocol]{href=../protocol/index.md icon=file}
+The twelve Claire contracts and their rules.
+::card[Verification]{href=../verification/index.md icon=check}
+Check launches, locks and rounds yourself.
+::card[Docs for agents]{href=../agents/index.md icon=sparkles}
+llms.txt and plain Markdown sources.
+:::
 
-## Check data freshness
-
-Limits do not guarantee that an integration is currently connected or collected data is complete. Check each integration's connection, error, and collection status.
-
-## More reference
-
-- [Developer REST API and SDK](developer-api.md): source-first reads, scopes, shared credentials, and SDK installation.
-- [Native MCP](mcp.md): Streamable HTTP setup and read-only tools.
-- [Security and data](security-and-data.md): access, public surfaces, private drafts and stored data.
-- [$CLAIRE holders and referrals](claire-holders.md): $CLAIRE on Robinhood Chain, holder fee rounds, benefits, referral rewards and launch airdrops with expiry.
-- [Protocol contract reference](protocol-contracts.md): the twelve Claire contracts, their functions, events, errors, immutables and fee rules, and where ABIs and deployment addresses are published.
-- [Verify on-chain](verify-on-chain.md): check a launch, payee, lock, revenue lock, price lock, router split or distribution round yourself, with or without the SDK, and the round manifest format.
-- [Docs for agents](agent-docs.md): the `llms.txt` page index and Markdown sources.
+:::cards
+::card[Limits and freshness]{href=limits.md icon=list}
+Current application limits and how to read collected data.
+:::
