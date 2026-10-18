@@ -24,7 +24,7 @@ Enable **API**, **MCP** or both, choose only the needed read scopes and select a
 Copy the secret when it appears; Claire retains a hash, not a recoverable copy. Revoke it when no longer needed. Changing its methods or scopes requires explicit manager approval and does not rotate the secret or expiry.
 :::
 
-![The Create key dialog: a name, an access method of API, MCP or Both, read permissions for organization context, Knowledge, asset metadata, Telegram, X mentions and token, and a 7-, 30- or 90-day expiry.](../images/developer-create-key.webp)
+![The Create key dialog: a name, an access method of API, MCP or Both, read permissions for project context, Knowledge, asset metadata, Telegram, X mentions and token, and a 7-, 30- or 90-day expiry.](../images/developer-create-key.webp)
 
 > [!WARNING]
 > Store the key in your server environment or agent's secret store, never in browser code, a public variable, a skill file or source control. A key stops working if its issuer loses owner or admin membership.

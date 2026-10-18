@@ -8,7 +8,7 @@ order: 2
 
 # Getting started
 
-Your personal space and organization workspaces are separate. Personal navigation contains your Home, Referrals, Wallet, [$CLAIRE](../claire/index.md) and account settings. An organization's sidebar starts with Home, Token, Community (Telegram), Social (X) and People; then Knowledge, Automations and Developers; then Assets; and Settings last. Create or choose a workspace for your project. You do not need to link a token to use Telegram, X, or Knowledge.
+Your personal space and project workspaces are separate. Personal navigation contains your Home, Referrals, Wallet, [$CLAIRE](../claire/index.md) and account settings. A project's sidebar starts with Home, Token, Community (Telegram), Social (X) and People; then Knowledge, Automations and Developers; then Assets; and Settings last. Create or choose a workspace for your project. You do not need to link a token to use Telegram, X, or Knowledge.
 
 ## Create a workspace
 
@@ -23,7 +23,7 @@ Sign in and create a workspace with a name and unique slug.
 Choose it from your workspace list. The creator becomes its owner.
 :::
 
-Owners and admins can use the optional **Getting started** sidebar checklist. Hide or restore it for the selected organization in **Personal settings → Appearance**; the preference applies to your account in this browser.
+Owners and admins can use the optional **Getting started** sidebar checklist. Hide or restore it for the selected project in **Personal settings → Appearance**; the preference applies to your account in this browser.
 
 ![The Finish setting up checklist on a workspace's Home page, grouped under Connect, Publish, Team and Optional, with a Connect Telegram shortcut.](../images/getting-started-checklist.webp)
 

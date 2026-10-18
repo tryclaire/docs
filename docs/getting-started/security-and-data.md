@@ -15,7 +15,7 @@ Only the owner can change another member's role or transfer ownership. Developer
 
 A Knowledge item's **public reference** classification does not publish it or grant public access. **Private is not integration-private**: approving Agent access for Notes lets credentials with `knowledge:read` read team notes, and agent providers may receive that content. Approving Telegram chats likewise lets credentials with `telegram:read` read stored conversations, including private linked groups or channels. External People reads still exclude private person notes. A file explicitly marked **public** in Assets has a public file URL; do not mark confidential files public.
 
-Only an owner designates a [token signing wallet](../sources/token-actions/signing-wallet.md), separately for each chain. Owners and admins can prepare token actions and publish vesting links, but the designated wallet must sign organization transactions. Removing app access does not revoke wallet keys or on-chain rights.
+Only an owner designates a [token signing wallet](../sources/token-actions/signing-wallet.md), separately for each chain. Owners and admins can prepare token actions and publish vesting links, but the designated wallet must sign project transactions. Removing app access does not revoke wallet keys or on-chain rights.
 
 Funding a lock exposes addresses, amounts, and its schedule on-chain even without a Claire proof page. Publishing additionally lists the lock on the token's Claire Proof page and gives it a public proof page; unpublishing does not make the underlying on-chain data private. A proof is not a liquidity lock or investment guarantee.
 

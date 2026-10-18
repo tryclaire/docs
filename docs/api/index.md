@@ -23,7 +23,7 @@ Sources, context and bounded persisted search.
 ::card[People and other reads]{href=people-and-other-reads.md icon=users}
 People, Knowledge, Assets, Telegram, X and token reads.
 ::card[Token locks, routers and rounds]{href=token-reads.md icon=chart}
-The organization's persisted Claire locks, fee routers and rounds.
+The project's persisted Claire locks, fee routers and rounds.
 ::card[Claire Proof endpoint]{href=claire-proof.md icon=shield}
 The public proof facts read from the chain at one block.
 ::card[Freshness and rate limits]{href=errors-and-rate-limits.md icon=bolt}

@@ -16,7 +16,7 @@ Until a $CLAIRE address is published, Claire shows **$CLAIRE is not live yet** a
 Only balances in your verified wallets count, read at a finalized Robinhood Chain block. $CLAIRE in locks, vesting or unclaimed distribution rounds does not count. If the holder data is unavailable, nothing is granted or removed.
 :::
 :::details[What happens if my balance drops below 25,000?]
-Only this benefit ends. Items created above the lower limits are kept and only new ones are refused. A Pro plan the organization paid for is never overridden or removed.
+Only this benefit ends. Items created above the lower limits are kept and only new ones are refused. A Pro plan the project paid for is never overridden or removed.
 :::
 
 ## Rewards and claims
@@ -25,7 +25,7 @@ Only this benefit ends. Items created above the lower limits are kept and only n
 A reward becomes payable once the payment's block is finalized. Claire's treasury then funds payable rewards in a claim round. Funding a round is not a payout: the reward reaches your payout wallet when a claim is submitted, by you or anyone. A reward also waits while you have no verified payout wallet.
 :::
 :::details[Why is a referral reward void?]
-Self-referrals are void: there is no reward when you belong to the paying organization, made the payment yourself, or paid from one of your verified wallets.
+Self-referrals are void: there is no reward when you belong to the paying project, made the payment yourself, or paid from one of your verified wallets.
 :::
 :::details[Can fee rounds be zero?]
 Yes. Amounts depend on activity and can be zero. Holders receive Claire protocol fees only, never $CLAIRE's own trading fees.

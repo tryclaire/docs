@@ -18,7 +18,7 @@ In **Knowledge**, the source must also be used (**Claire uses**) **and** explici
 | `assets:read` | File and folder metadata, not private object keys, file content or signed URLs. |
 | `telegram:read` | Linked chats, stored messages and Telegram-sourced People. |
 | `x:read` | Stored mentions and X-sourced People. |
-| `token:read` | Stored token identity and observations, plus the organization's Claire locks, fee routers, distribution rounds and the token's Claire Proof. |
+| `token:read` | Stored token identity and observations, plus the project's Claire locks, fee routers, distribution rounds and the token's Claire Proof. |
 
 ## Next steps
 

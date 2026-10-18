@@ -7,7 +7,7 @@ order: 8
 
 # Token actions
 
-In **Token**, the **signing wallet** button designates the organization's wallet and lists its transactions. With no token linked, **Launch a token** opens the launch setup, saved as a draft until you launch it; once a token is linked, **Vesting** funds and publishes locks. Robinhood Chain (pons v2) is the only network open today; Ethereum (Stockereum) is **coming soon** and cannot be selected. Robinhood Chain requires ETH for gas. Token tools are optional.
+In **Token**, the **signing wallet** button designates the project's wallet and lists its transactions. With no token linked, **Launch a token** opens the launch setup, saved as a draft until you launch it; once a token is linked, **Vesting** funds and publishes locks. Robinhood Chain (pons v2) is the only network open today; Ethereum (Stockereum) is **coming soon** and cannot be selected. Robinhood Chain requires ETH for gas. Token tools are optional.
 
 > [!IMPORTANT]
 > Ethereum is coming soon; do not plan a launch, link or lock on it.
@@ -16,7 +16,7 @@ In **Token**, the **signing wallet** button designates the organization's wallet
 
 | Task | Where | Who |
 | --- | --- | --- |
-| [Designate the signing wallet](signing-wallet.md) | **Token → signing wallet** | The organization owner signs a verification challenge |
+| [Designate the signing wallet](signing-wallet.md) | **Token → signing wallet** | The project owner signs a verification challenge |
 | [Launch a token](launch.md) | **Token → Launch a token** | Owners and admins prepare it; the designated wallet signs |
 | [Bring a linked token to Claire](linking-and-migration.md#bring-a-linked-token-to-claire) | **Bring this token to Claire** on the Token page | The creator's designated wallet, once |
 | [Change the split](creator-share-and-split.md#change-the-split-after-launch) | **Creator fees → Change the split** | The launcher only |

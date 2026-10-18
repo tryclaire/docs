@@ -58,6 +58,6 @@ After funding is verified and associated with the workspace, an owner or admin c
 
 This is evidence of a particular allocation, **not** an endorsement, payout guarantee, or liquidity lock. Unpublishing removes Claire's public listing/proof access; it does not hide on-chain addresses, transfers, or schedules.
 
-Beneficiaries claim at `/vesting/<chainId>/claire-<lockId>` (`revenue-<lockId>` or `price-<lockId>` for those lock types): a signed-in user can connect a wallet and prepare a payout claim without joining the organization. Anyone may submit and pay the network gas, or call `claim` on the lock contract directly, but tokens go only to the beneficiary recorded on-chain. The claim pays what is available when it executes; the displayed amount may change. Claims have no Claire fee.
+Beneficiaries claim at `/vesting/<chainId>/claire-<lockId>` (`revenue-<lockId>` or `price-<lockId>` for those lock types): a signed-in user can connect a wallet and prepare a payout claim without joining the project. Anyone may submit and pay the network gas, or call `claim` on the lock contract directly, but tokens go only to the beneficiary recorded on-chain. The claim pays what is available when it executes; the displayed amount may change. Claims have no Claire fee.
 
 Vesting with time alone does not send tokens automatically. Check the transaction outcome before relying on a payout. These beneficiary payouts are distinct from [creator-fee figures](../token.md#read-creator-fee-figures), which remain read-only in Claire.

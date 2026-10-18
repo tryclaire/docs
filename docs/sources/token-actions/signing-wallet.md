@@ -7,7 +7,7 @@ order: 9
 
 # Signing wallet
 
-The **signing wallet** is the organization's designated wallet. Owners and admins prepare token actions in Claire; this wallet signs them.
+The **signing wallet** is the project's designated wallet. Owners and admins prepare token actions in Claire; this wallet signs them.
 
 ## Designate the wallet
 
@@ -19,7 +19,7 @@ Open the signing wallet, then select the network and the wallet that will sign. 
 
 ### The owner signs a challenge
 
-An **organization owner** signs a short-lived verification challenge to prove control. This verifies the designation; it does not transfer funds or give Claire spending authority. Only the owner can designate or remove the wallet.
+An **project owner** signs a short-lived verification challenge to prove control. This verifies the designation; it does not transfer funds or give Claire spending authority. Only the owner can designate or remove the wallet.
 
 ### Admins prepare, the wallet signs
 

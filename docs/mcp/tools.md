@@ -13,7 +13,7 @@ With `context:read`, start with `get_context` and `list_sources`, then use `sear
 
 ## Token reads
 
-With `token:read`, `list_token_locks`, `list_fee_routers` and `list_token_rounds` (optional `page`; 20 rounds per page) return the organization's persisted Claire locks (time, revenue and price), fee routers (with payee and buyback state) and cumulative distribution rounds with their public proof and manifest URLs. They read stored records, make no chain request, and are described with the REST endpoints in [Developer REST API and SDK](../api/token-reads.md#read-token-locks-fee-routers-and-rounds). To check what they return against the chain, see [Verify on-chain](../verification/index.md).
+With `token:read`, `list_token_locks`, `list_fee_routers` and `list_token_rounds` (optional `page`; 20 rounds per page) return the project's persisted Claire locks (time, revenue and price), fee routers (with payee and buyback state) and cumulative distribution rounds with their public proof and manifest URLs. They read stored records, make no chain request, and are described with the REST endpoints in [Developer REST API and SDK](../api/token-reads.md#read-token-locks-fee-routers-and-rounds). To check what they return against the chain, see [Verify on-chain](../verification/index.md).
 
 `get_token_proof` (also `token:read`) returns the linked token's [Claire Proof](../sources/token-actions/claire-proof.md) read from the chain at one block, the facts on the token's public Claire Proof page; see [Read the Claire Proof](../api/claire-proof.md#read-the-claire-proof). Unlike the tools above it makes chain requests.
 

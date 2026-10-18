@@ -38,25 +38,25 @@ Your first verified wallet also becomes your referral payout wallet; you can cho
 
 - **Threshold:** 25,000 $CLAIRE held across your verified wallets. Only wallet balances count; $CLAIRE in locks, vesting or unclaimed distribution rounds does not.
 
-- **One target:** the top plan applies to you or to one organization you belong to. You can move it once every 30 days; if you leave that organization, it stops applying there and you can move it right away.
+- **One target:** the top plan applies to you or to one project you belong to. You can move it once every 30 days; if you leave that project, it stops applying there and you can move it right away.
 
-- **Nothing is deleted:** if your verified holding falls below 25,000, only this benefit ends. Items created above the lower limits are kept and only new ones are refused. A Pro plan the organization paid for is never overridden or removed.
+- **Nothing is deleted:** if your verified holding falls below 25,000, only this benefit ends. Items created above the lower limits are kept and only new ones are refused. A Pro plan the project paid for is never overridden or removed.
 
 ### Limits
 
 | Limit | Early access | Top plan |
 | --- | --- | --- |
-| Organization storage | 2 GiB | 10 GiB |
-| Unarchived automation rules per organization | 10 | 25 |
+| Project storage | 2 GiB | 10 GiB |
+| Unarchived automation rules per project | 10 | 25 |
 | Developer API requests per minute per key | 120 | 360 |
-| Developer API requests per minute per organization | 600 | 1,800 |
+| Developer API requests per minute per project | 600 | 1,800 |
 | Workspaces with figures on your personal Home | 25 | 100 |
 
 Early access applies everywhere today. The Developer API's per-IP limit is the same on both. Responses report the applicable limit in `RateLimit-Limit`.
 
 ## Pro plan
 
-An organization can buy the same limits as the top plan without holding $CLAIRE: **USD 49 per 30 days**, prepaid, no auto-renewal. Owners and admins pay from the organization's designated wallet in **Settings → General → Plan → Get Pro**, in USDG on Robinhood Chain, or by buying the stablecoin with ETH in one swap first. The payment goes to the Claire treasury and confirms on-chain; paying while Pro is active extends the paid period from its current end. Pro payments become available once the Claire protocol is deployed on that chain.
+A project can buy the same limits as the top plan without holding $CLAIRE: **USD 49 per 30 days**, prepaid, no auto-renewal. Owners and admins pay from the project's designated wallet in **Settings → General → Plan → Get Pro**, in USDG on Robinhood Chain, or by buying the stablecoin with ETH in one swap first. The payment goes to the Claire treasury and confirms on-chain; paying while Pro is active extends the paid period from its current end. Pro payments become available once the Claire protocol is deployed on that chain.
 
 ## Next steps
 

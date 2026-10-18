@@ -51,4 +51,4 @@ At delivery, Claire rechecks the rule, approving manager's role, connected accou
 > [!IMPORTANT]
 > Unknown is never retried automatically. Check the chat before taking another action.
 
-A completed post is not posted again just because pinning it failed. Live delivery has an organization-wide hourly cap; see [current limits](../reference/limits.md). See also [notifications](reports-and-notifications.md).
+A completed post is not posted again just because pinning it failed. Live delivery has a project-wide hourly cap; see [current limits](../reference/limits.md). See also [notifications](reports-and-notifications.md).
