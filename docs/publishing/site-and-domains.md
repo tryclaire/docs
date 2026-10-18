@@ -7,7 +7,9 @@ order: 21
 
 # Site and domains
 
-Your site's profile and docs use your workspace slug unless you connect a custom domain.
+Your site's profile and docs use your workspace slug unless you connect a custom domain. Without one, the site is at `/sites/<your-slug>` on the Claire app domain.
+
+With a linked token, the site's token card shows the market next to [Claire Proof](../sources/token-actions/claire-proof.md), the token's on-chain facts, and a **Locked supply** card lists the locks you published.
 
 ## Set up your public site
 

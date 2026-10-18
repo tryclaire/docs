@@ -15,7 +15,7 @@ To link an existing pons token, use **Link your token** on the Token page or **S
 
 ## Bring a linked token to Claire
 
-Migration brings a pons token you linked into Claire without relaunching it. Afterwards it counts as launched through Claire. The public Proof page reads **Launched through Claire** and the token gets everything a Claire launch has, except launch-only items such as the locked opening buy: free locks, revenue and price locks, [airdrops to $CLAIRE holders](../../claire/index.md), holder rounds, the buyback through the router, and a creator share paid to you, a vault or a split.
+Migration brings a pons token you linked into Claire without relaunching it. Afterwards it counts as launched through Claire. Claire Proof on your public site reads **Migrated to Claire** and the token gets everything a Claire launch has, except launch-only items such as the locked opening buy: free locks, revenue and price locks, [airdrops to $CLAIRE holders](../../claire/index.md), holder rounds, the buyback through the router, and a creator share paid to you, a vault or a split.
 
 | Migration at a glance | |
 | --- | --- |
@@ -23,7 +23,7 @@ Migration brings a pons token you linked into Claire without relaunching it. Aft
 | From then on | Claire takes 10% of everything the fee router receives |
 | Stays yours | Fees the token earned before migration |
 | Who can migrate | The creator's designated wallet, once, on Robinhood Chain |
-| Where to start | **Bring this token to Claire** on the Token page, the **Creator fees** payout card or the token's public Proof page |
+| Where to start | **Bring this token to Claire** on the Token page or the **Creator fees** page |
 
 **What it costs.** A one-time **USD 25** migration fee in the chain's fee stablecoin (USDG on Robinhood Chain), split evenly between the Claire treasury and $CLAIRE holders and paid in the same transaction as the adoption. If the adoption reverts, nothing is charged. From migration onward Claire takes **10%** of everything the fee router receives, the same as for a launch (see [Claire protocol fees](fees.md)).
 
@@ -48,7 +48,7 @@ Only the creator's designated wallet can migrate, once, on Robinhood Chain. The 
 
 ## Migration steps
 
-Owners and admins see **Bring this token to Claire** on a linked pons token that is not registered with Claire. It is a card on the Token page, a link in the **Creator fees** payout card and a button on the token's public Proof page. The dialog walks through these steps, each signed by the designated wallet and verified from its receipt:
+Owners and admins see **Bring this token to Claire** on a linked pons token that is not registered with Claire. It is a card on the Token page and on the **Creator fees** page. The dialog walks through these steps, each signed by the designated wallet and verified from its receipt:
 
 :::steps
 
@@ -92,7 +92,7 @@ The router pays the fee, registers the token and emits `Adopted`.
 > [!WARNING]
 > Step 8 takes effect immediately. The router has no function that sends the creator-fee recipient elsewhere, so only pons' own administration can change it afterwards, through a public 3-day timelock. Review [pons admin powers](pons-admin-powers.md) first.
 
-When it settles, the token's Claire features switch on and the public Proof page reads **Launched via Claire: Migrated {date}**. Anyone can [verify it](../../verification/launch-and-router.md#verify-a-launch): the launch path is `migrated`.
+When it settles, the token's Claire features switch on and Claire Proof on your public site reads **Migrated to Claire {date}**. Anyone can [verify it](../../verification/launch-and-router.md#verify-a-launch): the launch path is `migrated`.
 
 :::details[Migration stopped halfway]
 If the recipient moved but the adoption did not happen, reopen the dialog: it resumes at **Finish migration**, derived from the chain. Do not resend an uncertain transaction; use **Check or recover** as for a [launch](launch.md#launch-steps).

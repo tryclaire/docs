@@ -57,7 +57,7 @@ Read approved sources over REST or native MCP with a scoped credential.
 | **Site and Docs** | Your public profile, published docs and custom domains. |
 | **Automations** | Explicitly enabled Telegram rules that run on a source event or weekly schedule. |
 | **Developer API and MCP** | Read-only access to approved sources with scoped credentials. |
-| **Token actions** | Wallet-signed launches, locks, payout rounds and the public Claire Proof page. |
+| **Token actions** | Wallet-signed launches, locks, payout rounds and Claire Proof on your public site. |
 
 Connecting a source does not automatically permit external agent access. [Knowledge and Assets](sources/context.md) explains the switches that control it.
 
