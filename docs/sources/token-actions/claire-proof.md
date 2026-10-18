@@ -14,7 +14,7 @@ Claire Proof is what the chain and Claire's records show about a token. Every su
 
 ## What it shows
 
-The page header shows the token. A green shield appears when the token was launched or migrated through Claire, and the page reads **Launched through Claire**, **Migrated to Claire {date}** or **Not launched through Claire**. A lock icon is coloured by lock state: green when every lock is locked, yellow while a lock is unlocking, and red when a lock is unlocked or canceled. It opens the published locks, each read on-chain: amount, how much has unlocked and been claimed, status and dates. Each lock opens its own lock page with the full schedule and on-chain details. The page then shows:
+The page header shows the token. A green shield appears when the token was launched or migrated through Claire; hover or tap it to read **Launched through Claire** or **Migrated to Claire {date}**. When the project has published locks, a lock icon shows their state: green while every lock is still locked, yellow once unlocking has started, and red when everything is unlocked or a lock was canceled. It opens the published locks, each read on-chain: amount, how much has unlocked and been claimed, status and dates. Each lock opens its own lock page with the full schedule and on-chain details. The page then shows:
 
 - **Market** or **bonding curve** figures, depending on whether the token has graduated.
 - **Holder share** (Claire-launched tokens only): the share of trading revenue paid to holders. It is the current value and can only go up.
