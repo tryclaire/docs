@@ -41,7 +41,7 @@ Every token launch through Claire goes through the workspace's own **fee router*
 
 Before you sign, Claire shows the exact payment token and amount, the launchpad's own fees and a gas estimate.
 
-When the paying organization was referred, a referral reward comes out of Claire's treasury half of a service fee, never out of trading revenue. Projects that launched through Claire can also choose to airdrop part of their token to $CLAIRE holders. Both are described in [$CLAIRE holders and referrals](../../claire/index.md).
+When the paying project was referred, a referral reward comes out of Claire's treasury half of a service fee, never out of trading revenue. Projects that launched through Claire can also choose to airdrop part of their token to $CLAIRE holders. Both are described in [$CLAIRE holders and referrals](../../claire/index.md).
 
 ## Limits to keep in mind
 

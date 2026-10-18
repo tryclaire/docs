@@ -11,7 +11,7 @@ order: 31
 | --- | --- | --- |
 | [Fee rounds](#fee-rounds) | Every holder, pro rata | Cumulative rounds, claimed by you or anyone |
 | [Launch airdrops](#launch-airdrops) | Holders of a project's chosen snapshot | A project's own token, until its claims close |
-| [Referral rewards](#referral-rewards) | Referrers of paying organizations | Treasury-funded rounds, to your payout wallet |
+| [Referral rewards](#referral-rewards) | Referrers of paying projects | Treasury-funded rounds, to your payout wallet |
 
 ## Fee rounds
 
@@ -63,9 +63,9 @@ The public proof at `/airdrops/<id>` shows the rule, snapshot block, Merkle root
 
 ## Referral rewards
 
-Your invite link on the personal **Referrals** page counts link opens (unverified), sign-ups and paying projects separately. An organization keeps the referrer of the account that created it.
+Your invite link on the personal **Referrals** page counts link opens (unverified), sign-ups and paying projects separately. A project keeps the referrer of the account that created it.
 
-When such an organization pays a Claire service fee or a Pro plan payment that confirms on-chain, you receive **5% of Claire's treasury share** of that payment, or **7.5%** if your verified holding qualifies when the reward is recorded:
+When such a project pays a Claire service fee or a Pro plan payment that confirms on-chain, you receive **5% of Claire's treasury share** of that payment, or **7.5%** if your verified holding qualifies when the reward is recorded:
 
 | Payment | Claire treasury share | Reward at 5% | Reward at 7.5% |
 | --- | --- | --- | --- |
@@ -74,7 +74,7 @@ When such an organization pays a Claire service fee or a Pro plan payment that c
 | Pro plan, USD 49 | 49 | 2.45 | 3.675 |
 
 - A reward is never a share of trading revenue, of the $CLAIRE holder half or of project-holder funds.
-- Self-referrals are void: there is no reward when you belong to the paying organization, made the payment yourself, or paid from one of your verified wallets. If a payment is reorganized off the chain and confirms again, this is checked again.
+- Self-referrals are void: there is no reward when you belong to the paying project, made the payment yourself, or paid from one of your verified wallets. If a payment is reorganized off the chain and confirms again, this is checked again.
 - A reward becomes payable once the payment's block is finalized. Claire's treasury then funds payable rewards in a claim round on the fee's chain, in the fee's stablecoin (USDG on Robinhood Chain). Funding a round is not a payout: the reward reaches your payout wallet when a claim is submitted, by you or anyone. A reward waits while you have no verified payout wallet.
 - Pro payments are referral payments like service fees; the whole amount is treasury share, so the reward is 5% or 7.5% of USD 49 on the chain it was paid on.
 

@@ -30,7 +30,7 @@ Screenshots live in `docs/images/` and are linked with relative Markdown image s
 An image appears once its change is merged to `main`.
 Use PNG or WebP under 250 KB, crop to the relevant component, and write descriptive alt text.
 Public screenshots must not show test funds, local-fork labels, chain ids of test networks,
-test accounts or internal organization names.
+test accounts or internal project names.
 
 Changes go through a pull request with a passing **Docs check** before merging. A second
 person's approval is not required, so a solo maintainer can merge their own checked PR.
