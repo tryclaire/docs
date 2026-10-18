@@ -29,7 +29,7 @@ Asset metadata does not mean Claire has indexed or read the asset's contents. Ex
 
 ## Know what Claire does not do
 
-Claire does not write on X, generate replies or answers, approve its own publication of inferred project progress, custody funds, or claim creator fees. A wallet-signed beneficiary vesting claim is different from a creator-fee claim. An owner- or admin-authorized automation can post or pin supplied text in a Telegram chat; [review its delivery behavior](../automations/index.md) before enabling it.
+Claire does not write on X, generate replies or answers, approve its own publication of inferred project progress, custody funds, or claim creator fees. A wallet-signed beneficiary vesting claim is different from a creator-fee claim.
 
 ## Find privacy information
 
