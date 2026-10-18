@@ -1,47 +1,49 @@
 ---
 title: Claire Proof
-description: The public evidence page and badge for any supported token, readable without signing in.
+description: The on-chain facts about your token, shown on your public site and in an embeddable badge.
 icon: shield
 order: 17
 ---
 
 # Claire Proof
 
-Every supported token has a public **Claire Proof** page at `/proof/<chainId>/<token>`. It needs no sign-in, and it resolves for any ERC-20 on a supported network, not only tokens launched through Claire. Its open-graph image and the badge below use the same data.
+Claire Proof is what the chain and Claire's records show about your token. It is shown on your project's public site, in the token card's **On-chain** section, so visitors find it next to the market and your project. No sign-in is needed. The site is served at `/sites/<your-slug>` on the Claire app domain, or on your [custom domain](../../publishing/site-and-domains.md) if you connect one.
 
 > [!NOTE]
-> **Evidence, not endorsement.** The page states what the chain and Claire's records show. It says nothing about the token's value, the project's intentions or what happens next, and it is not an audit or a liquidity-lock guarantee.
-
-![The top of a Claire Proof page for a migrated token: the share of supply held in Claire locks and the Launch card listing the router, launchpad, creator share recipient, holder share, a pending creator share change, buyback state and fee recipient.](../../images/proof-page.webp)
+> **Evidence, not endorsement.** Claire Proof states what the chain and Claire's records show. It says nothing about the token's value, the project's intentions or what happens next, and it is not an audit or a liquidity-lock guarantee.
 
 ## What it shows
 
-The header names the token and network and reads **Launched through Claire** or **Not launched through Claire**. Then:
+The **On-chain** section reads **Launched through Claire**, **Migrated to Claire {date}** or **Not launched through Claire**. Then:
 
-- **Locked share:** the percentage of total supply held by the Claire time, revenue and price lock contracts, with the amounts, read in one call at one stated block. It counts every token those contracts hold for this token, including vested but unclaimed tokens and locks the project has not published. These are token allocations, not liquidity locks.
-- **Launch** (Claire-launched tokens only): the router, the launchpad, who receives the creator share (the creator's wallet, a Claire vesting vault, a Claire split, or a contract Claire's vault factory did not make) and, when the creator has announced a change, the pending recipient and the date it can take effect, the holder share (current; it can only go up), the buyback state on pons, and the **fee recipient**. The fee recipient is re-read on every load: the page says whether the Claire router is the launchpad's recipient with no change pending, or shows a warning when a change is pending or the launchpad pays someone else.
-- **Locked supply:** time, revenue and price lock amounts, each linked to its contract on the explorer; whether the opening buy was locked (from the confirmed launch receipt, with a link to the lock); the supply pons' locker holds on pons; and links to each lock the project has published.
-- **Revenue** (Claire-launched tokens only): per asset, what the router has counted as revenue on-chain and the cumulative total confirmed holder rounds have published to holders, with each round's manifest and transaction. A manifest's keccak-256 is the round's on-chain evidence.
-- **Verified connections:** the X account, Telegram chat and domain the project connected inside Claire. These are made in Claire, are not on-chain facts and do not show who controls the token.
-- **Verify it yourself:** a copyable `@tryclaire/sdk/protocol` snippet that reads the same facts from the chain, and a link to [Verify on-chain](../../verification/index.md). Take contract addresses from the SDK's `deployments` map, never from the page.
+- **Holder share** (Claire-launched tokens only): the share of trading revenue paid to holders. It is the current value and can only go up.
+- **Creator share goes to** (Claire-launched tokens only): the creator's wallet, a Claire vesting vault, a Claire split, or another contract.
+- **Locked in Claire locks:** the percentage of total supply held by the Claire time, revenue and price lock contracts, read in one call. It counts every token those contracts hold for this token, including vested but unclaimed tokens and locks the project has not published. These are token allocations, not liquidity locks.
+- **Revenue routed** and **Paid to holders** (Claire-launched tokens only): what the router has counted as revenue on-chain, and the cumulative total that confirmed holder rounds have published to holders, with the number of rounds.
+- **Notices:** a pending creator share change, with the date it can take effect, and a warning when the launchpad no longer pays the token's creator fees to its Claire fee router. The fee recipient is checked on every read.
+- The network and block the facts were read at, and a link to [Verify on-chain](../../verification/token-proof.md).
 
-![The Locked supply card of a Claire Proof page: time, revenue and price lock amounts, whether the opening buy was locked, and the supply held by the pons locker.](../../images/proof-locked-supply.webp)
+Below the token card, **Locked supply** lists the locks the project has published, each read on-chain: amount, how much has unlocked and been claimed, status and dates. Each lock opens its own lock page with the full schedule and on-chain details.
 
-For a token that is not registered by a Claire router factory the page states nothing about its launch, fee routing or revenue, and shows only its Claire locks. If the chain cannot be read, the page says so instead of showing figures.
+For a token that is not registered by a Claire router factory, the site states nothing about its launch, fee routing or revenue and shows only its Claire locks. If the chain cannot be read, it says so instead of showing figures.
+
+## Permalink
+
+`/proof/<chainId>/<token>` is the token's permanent link. It opens the public site of the project that linked the token, so it keeps working if the project changes its slug or domain.
 
 ## Badge and sharing
 
 ![The four rows of the Claire Proof badge: Launched via Claire, Locked by Claire locks, Creator share and Revenue routed.](../../images/proof-badge.webp)
 
-`/proof/<chainId>/<token>/badge.svg` is a small static dark badge (320 px wide, no script or fonts) showing **Launched via Claire** (Yes or No), **Locked by Claire locks** (a percentage) and, for Claire-launched tokens, **Revenue routed**. It is cached for about five minutes. The proof page's **Share this proof** card shows it with copy buttons for these snippets (shown with a placeholder URL):
+`/proof/<chainId>/<token>/badge.svg` is a small static dark badge (320 px wide, no script or fonts) showing **Launched via Claire** (Yes or No), **Locked by Claire locks** (a percentage), **Creator share** when a change is pending and, for Claire-launched tokens, **Revenue routed**. It is cached for about five minutes. On the **Token** page, **Share badge** shows it with copy buttons for these snippets (shown with a placeholder URL). Both link to the permalink:
 
 ```text
 [![Claire Proof for SYMBOL](https://<claire-app>/proof/<chainId>/<token>/badge.svg)](https://<claire-app>/proof/<chainId>/<token>)
 <a href="https://<claire-app>/proof/<chainId>/<token>"><img src="https://<claire-app>/proof/<chainId>/<token>/badge.svg" alt="Claire Proof for SYMBOL" width="320"></a>
 ```
 
-On the **Token** page, everyone sees a **Claire Proof** card that opens the public page, and owners and admins also see a **Share proof** card that opens the badge with the Markdown and HTML snippets.
+**Public site**, next to it, opens your site.
 
 ## For agents and scripts
 
-The same facts are available to an agent or script through the [developer API and MCP](../../api/claire-proof.md#read-the-claire-proof).
+The full set of facts, including the launchpad, buyback state, opening-buy lock, pons locker supply and each round's manifest, is available to an agent or script through the [developer API and MCP](../../api/claire-proof.md#read-the-claire-proof). To check any figure yourself, see [Verify on-chain](../../verification/token-proof.md).

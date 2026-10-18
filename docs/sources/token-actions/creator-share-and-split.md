@@ -46,8 +46,7 @@ Under **Creator share goes to**, choose **Me**, **Vesting vault** or **Split** (
 The notice is shown publicly, as "Creator share destination changes to {address, a vesting vault or a split} on {date}":
 
 - on the **Token** page, with a link to **Creator fees**;
-- on the public site's token card;
-- on the public [Claire Proof](claire-proof.md) page, as the **Pending change** row. When none is pending the row reads **Changes to the split**: it can change with 7 days' public notice, none is pending;
+- on the public site's token card, in Claire Proof's **On-chain** section;
 - on the Proof badge, as the row "Creator share · moves {date}".
 
 Owners and admins can also turn on the **Creator share change** notification, sent when a proposal or an applied change confirms. The router carries the notice on-chain too (`pendingPayee` and `payeeChangeAt`), and the fee log lists "Holder share raise" and "Creator share destination change" transactions. Anyone can [verify](../../verification/launch-and-router.md#verify-a-launch) that a router's current holder share and recipient follow only from these public changes.
