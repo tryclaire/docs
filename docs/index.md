@@ -11,9 +11,9 @@ order: 1
 
 All-in-one infrastructure layer for teams, communities, and on-chain participants.
 
-Claire brings Telegram and X activity, supported token observations, team context, and public docs into one workspace. Teams can maintain a public profile and use wallet-signed token launches and vesting where available. Token tools are optional.
+Claire brings Telegram and X activity, supported token observations, and team context into one workspace. Teams can use wallet-signed token launches and vesting where available. Token tools are optional.
 
-Your personal account is separate from workspaces. Each workspace has its own members, integrations, site, docs, assets, and access controls. You can belong to more than one workspace.
+Your personal account is separate from workspaces. Each workspace has its own members, integrations, assets, and access controls. You can belong to more than one workspace.
 
 ## Explore the essentials
 
@@ -22,8 +22,8 @@ Your personal account is separate from workspaces. Each workspace has its own me
 Create a workspace, invite your team and understand roles.
 ::card[Sources]{href=sources/index.md icon=plug}
 Telegram, X, token data, Knowledge, and Assets.
-::card[Publishing]{href=publishing/index.md icon=globe}
-A public profile and docs from Claire or GitHub.
+::card[Token actions]{href=sources/token-actions/index.md icon=coin}
+Wallet-signed launches, locks, payout rounds and Claire Proof.
 :::
 
 ## What would you like to do?
@@ -37,8 +37,8 @@ Add Claire's bot to a group or channel and follow its activity.
 Prove control of an account and inspect its collected activity.
 ::card[Control what agents can read]{href=sources/context.md#decide-what-to-include icon=lock}
 Choose which sources Claire uses and which agents may read.
-::card[Publish your docs]{href=publishing/github-docs.md#connect-a-repository icon=github}
-Sync a public or private GitHub repository into your site.
+::card[Share a Claire Proof]{href=sources/token-actions/claire-proof.md#badge-and-sharing icon=shield}
+Share a token's public proof page and badge.
 ::card[Automate a Telegram post]{href=automations/index.md#enable-a-rule icon=bolt}
 Post or pin text in a linked chat when a trigger fires.
 ::card[Launch a token]{href=sources/token-actions/launch.md#launch-steps icon=coin}
@@ -51,13 +51,12 @@ Read approved sources over REST or native MCP with a scoped credential.
 
 | Part | What you use it for |
 | --- | --- |
-| **Workspace** | Members, integrations, site, docs, assets and access controls for one project. |
+| **Workspace** | Members, integrations, assets and access controls for one project. |
 | **Sources** | Telegram chats, an X account and an optional pons token whose activity Claire collects. |
 | **Knowledge and Assets** | What Claire knows about your project and which sources agents may read. |
-| **Site and Docs** | Your public profile, published docs and custom domains. |
 | **Automations** | Explicitly enabled Telegram rules that run on a source event or weekly schedule. |
 | **Developer API and MCP** | Read-only access to approved sources with scoped credentials. |
-| **Token actions** | Wallet-signed launches, locks, payout rounds and Claire Proof on your public site. |
+| **Token actions** | Wallet-signed launches, locks, payout rounds and a public Claire Proof page per token. |
 
 Connecting a source does not automatically permit external agent access. [Knowledge and Assets](sources/context.md) explains the switches that control it.
 

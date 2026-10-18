@@ -22,7 +22,7 @@ In **Token**, the **signing wallet** button designates the organization's wallet
 | [Change the split](creator-share-and-split.md#change-the-split-after-launch) | **Creator fees → Change the split** | The launcher only |
 | [Lock tokens](vesting-and-locks.md#fund-a-vesting-allocation) | **Vesting → New lock** | Owners and admins prepare it; the designated wallet signs |
 | [Publish a holder round](payout-rounds.md) | **Creator fees → Publish holder round** | The designated wallet |
-| [Share proof](claire-proof.md) | Your public site, the `/proof/<chainId>/<token>` permalink and the badge | Anyone, no sign-in |
+| [Share proof](claire-proof.md) | The token's public proof page at `/proof/<chainId>/<token>` and the badge | Anyone, no sign-in |
 
 ## Three ways in on Robinhood Chain
 
@@ -35,7 +35,7 @@ In **Token**, the **signing wallet** button designates the organization's wallet
 
 **1. Launch through Claire (recommended).** Every feature: the fee router, creator share to you, a vault or a split, holder rounds, free locks including revenue and price locks, [airdrops to $CLAIRE holders](../../claire/index.md), the buyback and the locked opening buy. See [Launch a token](launch.md).
 
-**2. Link an existing pons token.** Use **Link your token** on the Token page or in **Settings → Connections**. You get the workspace: market data, holders, graduation, snapshots, the public site, community and the API. Claire Proof on your public site reads "Not launched through Claire". Nothing happens on-chain and no Claire contract is involved. Date locks stay available as an opt-in at the USD 25 lock fee.
+**2. Link an existing pons token.** Use **Link your token** on the Token page or in **Settings → Connections**. You get the workspace: market data, holders, graduation, snapshots, community and the API. Its Claire Proof page reads "Not launched through Claire". Nothing happens on-chain and no Claire contract is involved. Date locks stay available as an opt-in at the USD 25 lock fee.
 
 **3. Bring this token to Claire (migration).** See [Bring a linked token to Claire](linking-and-migration.md#bring-a-linked-token-to-claire).
 

@@ -17,7 +17,6 @@ The Developers API and MCP connections are read-only; enabling Agent access does
 | Trigger | Event |
 | --- | --- |
 | Authored X activity | A post or reply from the connected X account, not an incoming mention. |
-| Docs publication | A docs page's first publication. |
 | Join portal | A join approved through the portal. |
 | Weekly schedule | A scheduled rule trigger, not permission for Claire to write on X. |
 

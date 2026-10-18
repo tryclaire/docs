@@ -8,7 +8,7 @@ order: 2
 
 # Getting started
 
-Your personal space and organization workspaces are separate. Personal navigation contains your Home, Referrals, Wallet, [$CLAIRE](../claire/index.md) and account settings. An organization's sidebar starts with Home, Token, Community (Telegram), Social (X) and People; then Knowledge, Automations and Developers; then Site, Docs and Assets; and Settings last. Create or choose a workspace for your project. You do not need to link a token to use Telegram, X, Knowledge, or the site.
+Your personal space and organization workspaces are separate. Personal navigation contains your Home, Referrals, Wallet, [$CLAIRE](../claire/index.md) and account settings. An organization's sidebar starts with Home, Token, Community (Telegram), Social (X) and People; then Knowledge, Automations and Developers; then Assets; and Settings last. Create or choose a workspace for your project. You do not need to link a token to use Telegram, X, or Knowledge.
 
 ## Create a workspace
 
@@ -27,7 +27,7 @@ Owners and admins can use the optional **Getting started** sidebar checklist. Hi
 
 ![The Finish setting up checklist on a workspace's Home page, grouped under Connect, Publish, Team and Optional, with a Connect Telegram shortcut.](../images/getting-started-checklist.webp)
 
-Claire uses a dark interface. Appearance offers preset or custom accent colours for this browser, not an account-wide theme or a change to your public site's appearance.
+Claire uses a dark interface. Appearance offers preset or custom accent colours for this browser, not an account-wide theme.
 
 ## Invite teammates
 
@@ -63,8 +63,8 @@ You can do these in any order.
 Follow your community's messages and people.
 ::card[Connect X]{href=../sources/x.md#connect-an-account icon=x}
 Inspect an account's collected activity.
-::card[Set up your site]{href=../publishing/site-and-domains.md icon=globe}
-Publish a public profile and docs.
+::card[Control what agents can read]{href=../sources/context.md#decide-what-to-include icon=lock}
+Choose which sources Claire uses and which agents may read.
 :::
 
 For optional token tools, [verify a wallet and launch or vest a supported token](../sources/token-actions/signing-wallet.md) when your chosen network is available.
