@@ -54,7 +54,7 @@ Check the recorded outcome. Approval and funding each need gas. Review the desti
 
 ## Publish proof and claim payouts
 
-After funding is verified and associated with the workspace, an owner or admin can **Publish** the lock. The organization site links to `/locks/<chainId>/claire-<lockId>` (`revenue-<lockId>` for a revenue lock, `price-<lockId>` for a price lock), where anyone can inspect the beneficiary, schedule, contract, funding transaction, and on-chain locked, claimable, and withdrawn amounts. A cancelable lock with a notice shows **Funder can cancel after a N-day notice**, then the date once a cancellation is requested.
+After funding is verified and associated with the workspace, an owner or admin can **Publish** the lock. The token's Claire Proof page lists it and links to `/locks/<chainId>/claire-<lockId>` (`revenue-<lockId>` for a revenue lock, `price-<lockId>` for a price lock), where anyone can inspect the beneficiary, schedule, contract, funding transaction, and on-chain locked, claimable, and withdrawn amounts. A cancelable lock with a notice shows **Funder can cancel after a N-day notice**, then the date once a cancellation is requested.
 
 This is evidence of a particular allocation, **not** an endorsement, payout guarantee, or liquidity lock. Unpublishing removes Claire's public listing/proof access; it does not hide on-chain addresses, transfers, or schedules.
 

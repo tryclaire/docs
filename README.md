@@ -1,6 +1,6 @@
 # Claire documentation
 
-Public documentation source for [Claire](https://tryclaire.net), rendered by Claire at
+Public documentation source for [Claire](https://tryclaire.net), published at
 [docs.tryclaire.net](https://docs.tryclaire.net). Start with the [Introduction](docs/index.md).
 
 ## Contribute
@@ -21,13 +21,13 @@ External URLs are not fetched, so provider outages cannot block a documentation 
 Review external links and the rendered page when changing them.
 
 Keep existing paths stable. Use relative Markdown links, such as `../sources/telegram.md`.
-Pages use `title`, `description`, `icon` and `order` front matter; `index.md` is a section's landing page and may add `tab` to place the section under a top tab. Docs can use cards, steps, tabs and collapsible sections; see the [rich content guide](docs/publishing/rich-content/index.md).
+Pages use `title`, `description`, `icon` and `order` front matter; `index.md` is a section's landing page and may add `tab` to place the section under a top tab. Pages can use cards, steps, tabs and collapsible sections, as the existing pages do.
 Use ordinary Markdown rather than executable MDX components. Repository housekeeping belongs
 outside `docs/` so it is not published as a product page.
 
 Screenshots live in `docs/images/` and are linked with relative Markdown image syntax, such as
-`![Alt text](../images/token-page.webp)` (one more `../` from a page in a subfolder); raw HTML `<img>` tags are not resolved. Claire serves
-them from this public repository's `main` branch, so an image appears once its change is merged.
+`![Alt text](../images/token-page.webp)` (one more `../` from a page in a subfolder); raw HTML `<img>` tags are not resolved.
+An image appears once its change is merged to `main`.
 Use PNG or WebP under 250 KB, crop to the relevant component, and write descriptive alt text.
 Public screenshots must not show test funds, local-fork labels, chain ids of test networks,
 test accounts or internal organization names.
@@ -39,14 +39,9 @@ and requires no provider or deployment secrets.
 
 ## Publishing
 
-This repository (`tryclaire/docs`, branch `main`, folder `docs`) is the connected source for
-[docs.tryclaire.net](https://docs.tryclaire.net). Merging to `main` with changes under `docs/`
-enqueues a Claire sync; pages publish without a separate approval step. CI checks the
-repository but does not publish anything.
-
-After merging, check the Docs sync status and the rendered navigation before announcing
-a change as live. Do not document rollout-gated features (such as Ethereum/Stockereum
-availability) as generally available until they are verified in production.
+The documentation site is built from this repository (branch `main`, folder `docs`). CI checks
+the repository but does not publish anything. Do not document rollout-gated features (such as
+Ethereum/Stockereum availability) as generally available until they are verified in production.
 
 ## License
 

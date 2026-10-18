@@ -15,7 +15,7 @@ To link an existing pons token, use **Link your token** on the Token page or **S
 
 ## Bring a linked token to Claire
 
-Migration brings a pons token you linked into Claire without relaunching it. Afterwards it counts as launched through Claire. Claire Proof on your public site reads **Migrated to Claire** and the token gets everything a Claire launch has, except launch-only items such as the locked opening buy: free locks, revenue and price locks, [airdrops to $CLAIRE holders](../../claire/index.md), holder rounds, the buyback through the router, and a creator share paid to you, a vault or a split.
+Migration brings a pons token you linked into Claire without relaunching it. Afterwards it counts as launched through Claire. The token's Claire Proof page reads **Migrated to Claire** and the token gets everything a Claire launch has, except launch-only items such as the locked opening buy: free locks, revenue and price locks, [airdrops to $CLAIRE holders](../../claire/index.md), holder rounds, the buyback through the router, and a creator share paid to you, a vault or a split.
 
 | Migration at a glance | |
 | --- | --- |
@@ -92,7 +92,7 @@ The router pays the fee, registers the token and emits `Adopted`.
 > [!WARNING]
 > Step 8 takes effect immediately. The router has no function that sends the creator-fee recipient elsewhere, so only pons' own administration can change it afterwards, through a public 3-day timelock. Review [pons admin powers](pons-admin-powers.md) first.
 
-When it settles, the token's Claire features switch on and Claire Proof on your public site reads **Migrated to Claire {date}**. Anyone can [verify it](../../verification/launch-and-router.md#verify-a-launch): the launch path is `migrated`.
+When it settles, the token's Claire features switch on and the token's Claire Proof page reads **Migrated to Claire {date}**. Anyone can [verify it](../../verification/launch-and-router.md#verify-a-launch): the launch path is `migrated`.
 
 :::details[Migration stopped halfway]
 If the recipient moved but the adoption did not happen, reopen the dialog: it resumes at **Finish migration**, derived from the chain. Do not resend an uncertain transaction; use **Check or recover** as for a [launch](launch.md#launch-steps).
