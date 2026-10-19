@@ -21,4 +21,4 @@ Public search and indexing can lag, so a mention may not appear immediately or a
 
 ## Understand read-only access
 
-Connecting an account does not give Claire permission to publish posts, replies, or direct messages on X. [Automations](../automations/index.md) can use authored X posts or replies as a trigger for a Telegram action, not an X action.
+Connecting an account does not give Claire permission to publish posts, replies, or direct messages on X.

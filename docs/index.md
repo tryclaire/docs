@@ -39,8 +39,6 @@ Prove control of an account and inspect its collected activity.
 Choose which sources Claire uses and which agents may read.
 ::card[Share a Claire Proof]{href=sources/token-actions/claire-proof.md#badge-and-sharing icon=shield}
 Share a token's public proof page and badge.
-::card[Automate a Telegram post]{href=automations/index.md#enable-a-rule icon=bolt}
-Post or pin text in a linked chat when a trigger fires.
 ::card[Launch a token]{href=sources/token-actions/launch.md#launch-steps icon=coin}
 Designate a signing wallet and walk through a wallet-signed launch.
 ::card[Connect an agent]{href=mcp/index.md icon=terminal}
@@ -54,7 +52,6 @@ Read approved sources over REST or native MCP with a scoped credential.
 | **Workspace** | Members, integrations, assets and access controls for one project. |
 | **Sources** | Telegram chats, an X account and an optional pons token whose activity Claire collects. |
 | **Knowledge and Assets** | What Claire knows about your project and which sources agents may read. |
-| **Automations** | Explicitly enabled Telegram rules that run on a source event or weekly schedule. |
 | **Developer API and MCP** | Read-only access to approved sources with scoped credentials. |
 | **Token actions** | Wallet-signed launches, locks, payout rounds and a public Claire Proof page per token. |
 
@@ -63,8 +60,8 @@ Connecting a source does not automatically permit external agent access. [Knowle
 ## Learn at your own pace
 
 :::cards
-::card[Automations]{href=automations/index.md icon=bolt}
-Telegram rules, run outcomes and notifications.
+::card[Notifications]{href=getting-started/index.md#set-notification-preferences icon=bell}
+Choose how workspace updates reach you.
 ::card[Token guide]{href=sources/token.md icon=coin}
 Stages, market data, holder snapshots and creator-fee figures.
 ::card[$CLAIRE]{href=claire/index.md icon=star}

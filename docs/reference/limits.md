@@ -17,8 +17,7 @@ These are current application guards and early-access limits, not proposed prici
 | Invitations | 20 requests per workspace per hour; invitation links expire in 7 days. |
 | Assets | 2 GiB of workspace storage (10 GiB on the top plan); 50 MiB per file; 60 upload requests per workspace per hour. |
 | Image upload | 5 MiB per image. |
-| Automations | 10 unarchived rules per workspace (25 on the top plan); up to 30 Telegram action attempts per workspace per hour. |
-| X automation collection | 100,000 search credits per connected X account per UTC month. |
+| X collection | 100,000 search credits per connected X account per UTC month. |
 | Holder snapshot export | Up to 10,000 holder rows in the full response; `truncated` signals more matches. |
 | Developer API | 120 requests per minute per key and 600 per minute per workspace (360 and 1,800 on the top plan), and 300 per minute per IP. `RateLimit-Limit` reports the limit that applies. |
 

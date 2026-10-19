@@ -8,7 +8,7 @@ order: 2
 
 # Getting started
 
-Your personal space and project workspaces are separate. Personal navigation contains your Home, Referrals, Wallet, [$CLAIRE](../claire/index.md) and account settings. A project's sidebar starts with Home, Token, Community (Telegram), Social (X) and People; then Knowledge, Automations and Developers; then Assets; and Settings last. Create or choose a workspace for your project. You do not need to link a token to use Telegram, X, or Knowledge.
+Your personal space and project workspaces are separate. Personal navigation contains your Home, Referrals, Wallet, [$CLAIRE](../claire/index.md) and account settings. A project's sidebar starts with Home, Token, Community (Telegram), Social (X) and People; then Knowledge and Developers; then Assets; and Settings last. Create or choose a workspace for your project. You do not need to link a token to use Telegram, X, or Knowledge.
 
 ## Create a workspace
 
@@ -53,6 +53,12 @@ Invitation links expire after 7 days. Access to workspace data depends on curren
 | Member | View the workspace and its connected activity; management actions are restricted. |
 
 Only the owner changes another member's role.
+
+## Set notification preferences
+
+Your notification bell holds workspace updates. Email and Telegram direct-message delivery have per-user preferences by notification kind. In-app records remain visible independently. Failing X collection queues delivery immediately; other updates queue later.
+
+Telegram DMs only reach accounts that pressed **Start** on Claire's bot. Delivery may be delayed by provider failures or channel limits.
 
 ## Choose your next step
 

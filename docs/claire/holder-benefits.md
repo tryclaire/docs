@@ -47,7 +47,6 @@ Your first verified wallet also becomes your referral payout wallet; you can cho
 | Limit | Early access | Top plan |
 | --- | --- | --- |
 | Project storage | 2 GiB | 10 GiB |
-| Unarchived automation rules per project | 10 | 25 |
 | Developer API requests per minute per key | 120 | 360 |
 | Developer API requests per minute per project | 600 | 1,800 |
 | Workspaces with figures on your personal Home | 25 | 100 |

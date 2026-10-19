@@ -32,4 +32,4 @@ Collection starts when the bot is added; it cannot fetch earlier chat history. C
 2. Configure the group to require approval and grant the bot permission to approve join requests; the Portal dialog checks this live.
 3. A requester completes a human check in a Telegram Mini App. Claire verifies Telegram's signed data and the check before approving or declining. Review outcomes, and approve or decline waiting requests, in the chat's Portal dialog.
 
-If the portal is not enabled, Telegram's human admins retain control of requests. The bot's portal messages concern verification and the request outcome; it does not publish messages on behalf of a requester. [Automations](../automations/index.md) are separate, explicitly enabled rules that can post or pin in a linked chat.
+If the portal is not enabled, Telegram's human admins retain control of requests. The bot's portal messages concern verification and the request outcome; it does not publish messages on behalf of a requester.
